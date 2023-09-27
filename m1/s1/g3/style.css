@@ -1,0 +1,41 @@
+.col-verde{
+    color: green;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.col-red{
+    color: red;
+}
+
+.arial{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* conflitti e specificita
+
+*/
+
+div span {
+    color: red;
+}
+
+.blu span {color: blue; font-family: Verdana, Geneva, Tahoma, sans-serif
+    ;}
+
+    span{
+        font-size: larger;
+    }
+    div span {}
+
+    #ciao span {
+        color: rgb(205, 17, 42);
+    }
+    table {
+        width: 100%;
+    }
+    td{
+        border :1px   solid black 
+    }
