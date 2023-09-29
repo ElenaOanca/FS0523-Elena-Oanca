@@ -6,6 +6,17 @@
 
 
 /* Your styles here */
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.65;
+    padding: 5px;
+    color: #393d41;
+    margin: 0;
+   width: auto;
+   align-items: center;
+   align-content: center;
+}
 
 
 .section1 button{
@@ -18,15 +29,7 @@
     font-weight: 700;
 }
 
-body{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.2rem;
-    line-height: 1.65;
-    padding: 15px;
-    color: #393d41;
-    margin: 15px;
-   width: auto;
-}
+
 
 h1,h2,h3,h4,h5,h6{
     font-family: 'Montserrat', sans-serif;
@@ -50,12 +53,14 @@ h3{
 header{
     background-color: black;
     min-width: 500;
-    width: auto;
+  
     text-align: center;
     margin: 0;
-    padding: 2em 1.5em;
+    
 }
-
+header{
+    margin: 0;
+}
 header div img{
     margin:auto;
 }
@@ -89,6 +94,7 @@ p{
 
 .section1, .section2, .section5, .section3, .section4{
     text-align: center;
+    margin: auto;
     margin-top: 3em ;
    
 }
@@ -129,15 +135,13 @@ footer h1{
     color: white;
 }
 
-.tel{
+.tel, .adress, .mail{
     display: block;
-}
-.mail{
-    display: block;
+    color: aliceblue;
 }
 
-.adress{
-    display: block;
+a{
+    color: aliceblue;
 }
 
 hr{
