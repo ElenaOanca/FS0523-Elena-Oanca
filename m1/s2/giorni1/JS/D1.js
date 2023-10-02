@@ -21,6 +21,10 @@ REGOLE
  4 null 
 5 undefined una variabile che a cui non e stato assegnato un val 
 */
+let n=0
+n=5
+let nome='io sono Elena'
+
 
 /* ESERCIZIO 2
  Crea una variable chiamata "name" e assegna ad essa il tuo nome, sotto forma di stringa.
