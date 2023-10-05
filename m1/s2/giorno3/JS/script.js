@@ -116,7 +116,8 @@ const starWarsCharacters = [
   */
  
  for(let i=0; i < starWarsCharacters.length ; i++){
-    document.write(starWarsCharacters[i] )
+   let personaggioCorrente = starWarsCharacters[i]
+   characters.push(personaggioCorrente.name) 
  }
  
   
@@ -124,11 +125,17 @@ const starWarsCharacters = [
     Seguendo i passaggi precedenti crea un nuovo array chiamato "femaleCharacters" e inserisci al suo interno tutti gli oggetti femminili.
   */
 
-    femalecharacters = new Array();
-   /* let female = starWarsCharacters.find(starWarsCharacter => starWarsCharacter.gender =="female");
-    console.log(female)*/
-   femalecharacters[0]=starWarsCharacters[4]
-   femalecharacters[1]=starWarsCharacters[5]
+    femalecharacters = [];
+    for(let i=0; i < starWarsCharacters.length ; i++){
+
+        if (starWarsCharacters[i].gender == female) {
+            femalecharacters.push( starWarsCharacter[i].gender)
+            
+        }
+    }
+
+    
+  femalecharacters.push( starWarsCharacter.gender) 
    console.log(femalecharacters)
 
   /* ESERCIZIO 4
@@ -136,10 +143,10 @@ const starWarsCharacters = [
     Ad ognuna di queste proprietà assegna come valore un array vuoto.
   */
  let eyeColor = {
-    blue : blue = new array (),
-    yellow : yellow = new array (),
-    brown : brown = new array (),
-    red : red = new array (),
+    blue : new array (),
+    yellow : new array (),
+    brown :  new array (),
+    red :  new array (),
  
 
  }
@@ -170,9 +177,7 @@ const starWarsCharacters = [
   /* ESERCIZIO 6
     Usa un while loop per calcolare la massa totale dell'equipaggio. Salvala in una variabile chiamata "crewMass". */
 
-    for(let i=0; i < starWarsCharacters.length ; i++){
-    document.write(starWarsCharacters[i].mass)
-    
+
  
   
   /* ESERCIZIO 7
