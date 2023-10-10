@@ -173,23 +173,45 @@
 
       }
       paintItGreen();
-      
+
 
       /* ESERCIZIO 9
        Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
       */
 
       const makeItClickable = function () {
+        const nuovoH = document.getElementsByTagName('h1');
+         const arrH = nuovoH.split();
+         const arrHClick = arrH.onclick();
+         arrHClick.pop();
+
 
       }
+      makeItClickable()
 
       /* ESERCIZIO 10
        Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
+
+        <footer>
+      <h3>
+        DOM Manipulation is super
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents"
+          >AWESOME!</a
+        >
+      </h3>
+    </footer>
       */
 
       const revealFooterLink = function () {
+        const link = document.querySelector('footer a');
+        if (link){
+          const url = link.href;
+          alert ( 'il link è :' + url)
 
+        }
       }
+      revealFooterLink();
 
       /* ESERCIZIO 11
        Crea una funzione che crei una tabella nell'elemento con id "tableArea". 
@@ -197,85 +219,163 @@
     */
 
       const generateTable = function () {
-             let table = document.createElement ('table');
-             let primaTr = document.createElement('tr');
-
-             let campi =[ 'immagine', 'nome prodotto' , 'quantita', 'prezzo'];
-             for( let campo of campi){
-              let th = document.createElement('th');
-              tr.innerText = campo ;
-              primaTr.append(th)
-             }
-  
+            
              let dati = [
               {
-                immagine = 'https://picsum.photos/200/300?random=1',
+                immagine : 'https://picsum.photos/200/300?random=1',
                 nomeProdoto : 'Lorem Ipsum',
                 quantita : 50,
                 prezzo : 13,
 
               },
               {
-                immagine = 'https://picsum.photos/200/300?random=1',
+                immagine : 'https://picsum.photos/200/300?random=1',
                 nomeProdoto : 'Lorem Ipsum',
                 quantita : 3,
                 prezzo : 14,
 
               },
               {
-                immagine = 'https://picsum.photos/200/300?random=1',
+                immagine : 'https://picsum.photos/200/300?random=1',
                 nomeProdoto : 'Lorem Ipsum',
                 quantita : 1,
                 prezzo : 30,
 
               },
               {
-                immagine = 'https://picsum.photos/200/300?random=1',
+                immagine : 'https://picsum.photos/200/300?random=1',
                 nomeProdoto : 'Lorem Ipsum',
                 quantita : 15,
                 prezzo : 15,
 
               }
+                       ];
+              
+       const tableArea = document.getElementById('tableArea');
 
-              for ( let prop in prodotto){
-                const td = document.createElement('th')
-                th.innerText = prodotto[prop]
-                tr.append(td)
-                
-              }
+       const createTable = document.createElement('table');
 
-             ]
+       const createThead = document.createElement('thead');
 
-   // fine creazione itestazione tabella
-   // inizio creazione corpo tabella
+       const headerRow = document.createElement("tr");
+
+      const headers = ["Immagine", "Nome Prodotto", "Quantità", "Prezzo"];
+
+      headers.forEach(function(headerText) {
+        let th = document.createElement("th");
+        th.textContent = headerText;
+        headerRow.appendChild(th);
+      });
+
+      thead.appendChild(headerRow);
+      table.appendChild(thead);
+
+      // Creiamo il corpo della tabella
+      let tbody = document.createElement("tbody");
+      dati.forEach(function(prodotto) {
+        let row = document.createElement("tr");
+        let cell1 = document.createElement("td");
+        let cell2 = document.createElement("td");
+        let cell3 = document.createElement("td");
+        let cell4 = document.createElement("td");
+
+        cell1.innerHTML = '<img src="https://picsum.photos/200/300?random=1">';
+        cell2.textContent = prodotto.nomeProdotto;
+        cell3.textContent = prodotto.quantita;
+        cell4.textContent = prodotto.prezzo.toFixed(2);
+
+        row.appendChild(cell1);
+        row.appendChild(cell2);
+        row.appendChild(cell3);
+        row.appendChild(cell4);
+
+        tbody.appendChild(row);
+      });
+      table.appendChild(tbody);
+
+      // Aggiungiamo la tabella all'elemento con id "tableArea"
+      tableArea.appendChild(table);
+
+
+   
   }
-
-
       generateTable()
 
       /* ESERCIZIO 12
        Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
     */
 
-      const addRow = function () {}
+      const addRow = function () {
+        let newRow = document.createElement('tr');
+
+        let riga = getElementById('tableArea[0]');
+        let rigaClone = { ...riga,   immagine : 'https://picsum.photos/200/300?random=1',
+                nomeProdoto : 'Lorem Ipsum',
+                quantita : 5,
+                prezzo : 29,
+
+        }
+       let row = document.createElement("tr");
+
+      // Creare le celle (colonne) per la riga
+      let cell1 = document.createElement("td");
+      let cell2 = document.createElement("td");
+      let cell3 = document.createElement("td");
+      let cell4 = document.createElement("td");
+        
+      cell1.textContent = '<img src="https://picsum.photos/200/300?random=1">';;
+      cell2.textContent = prodotto.nomeProdotto;
+      cell3.textContent = prodotto.quantita;
+      cell4.textContent = prodotto.prezzo.toFixed(4);
+
+      row.appendChild(cell1);
+      row.appendChild(cell2);
+      row.appendChild(cell3);
+      row.appendChild(cell4);
+      }
 
       /* ESERCIZIO 14
       Crea una funzione che nasconda le immagini della tabella quando eseguita
     */
 
-      const hideAllImages = function () {}
+      const hideAllImages = function () {
+        let tabellaImmagini = getElementsById(' tableArea'); // variabile che seleziona la table
+        let img = tabellaImmagini.querySelectorAll( 'td img'); // variabile che seleziona le img
+        img.forEach((img) => {img.style.disply ='none';})// seleziono e modifico il display di css in none per ogni img
 
+
+      }
+
+      hideAllImages();
       /* EXTRA ESERCIZIO 15
       Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
     */
 
-      const changeColorWithRandom = function () {}
+      const changeColorWithRandom = function () {
+        const prendiH2 = document.getElementById('changeMyColor');
+         const colore = coloreCasuale();// non sono riuscita a trovare un metodo addatto
+          const cambiaColore = prendiH2.style.color = colore;
+
+         prendiH2.addEventListener('click',cambiaColore )
+
+      }
+      changeColorWithRandom()
 
       /* EXTRA ESERCIZIO 16
       Crea una funzione che elimini le vocali da ogni elemento testuale della pagina (puoi aiutarti con i nuovi metodi degli array di ES6)
     */
 
-      const deleteVowels = function () {}
+      const deleteVowels = function () {
+
+         const elementiTestuali = document.documentElement('textContent');
+         const splitElementi = elementiTestuali.split();
+        const vocali = splitElementi.forEach( if ( i === 'a' || i === 'e' || i === 'i' || i === 'o' || i === 'u')
+        {
+          splitElementi.remove();
+        })
+
+
+      }
     </script>
   </body>
 </html>
