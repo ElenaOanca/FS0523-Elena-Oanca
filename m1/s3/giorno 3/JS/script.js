@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     /*addButtonComplete.addEventListener("click", function() {  
     if('click'){
+        let bottonComplete = document.getElementByClass('complete-task');
         bottonComplete.onclick = function () {
             newTask.style.textDecoration = "line-through";
         }});*/
