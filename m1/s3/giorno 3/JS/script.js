@@ -31,11 +31,11 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    //addButtonComplete.addEventListener("click", function() {  
+    /*addButtonComplete.addEventListener("click", function() {  
     if('click'){
         bottonComplete.onclick = function () {
             newTask.style.textDecoration = "line-through";
-        }});
+        }});*/
 
     function addTask(taskText) {
         const li = document.createElement("li");
