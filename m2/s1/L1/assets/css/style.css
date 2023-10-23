@@ -177,4 +177,82 @@ footer {
 }
 footer a {
     color: fuchsia;
+
+
+
+
+
 }
+
+
+
+
+/*---------------------------------------------------------------------------------*/
+
+@media screen and (min-width: 577px) {
+    header nav {
+        display: inline-block;
+  
+    }
+
+    header nav li{
+        display: inline;
+        margin: 30px;
+        font-size: large;
+       
+    }
+    h1{
+        text-align: left;
+        margin-left: 10px;
+        padding-left: 0;
+    }
+    
+
+   
+}
+
+
+ /*----------------------------------------------------------------------------------------------------*/
+  
+  /* Media query per schermi da 769px*/
+@media screen and (min-width: 769px) {
+    .allinea div{
+        width: calc(99% / 2 - 4px); /* divide lo spazio per i due div in larghezza*/
+        display: inline-block;
+        vertical-align: top;
+    }
+  
+    section {
+      background-color: #a3a3a3;
+      
+      height: 300px;
+      display: inline-block; /* Rendi la section un blocco inline */
+      vertical-align: top; /* Allinea in alto rispetto all'iframe */
+    }
+  
+    iframe {
+      
+      height: 300px;
+      display: inline-block; /* Rendi l'iframe un blocco inline */
+      vertical-align: top; /* Allinea in alto rispetto alla section */
+    }
+  }
+
+
+
+  /*--------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+  /* Media query per schermi oltre 1200px */
+  @media screen and (min-width: 1201px) {
+    aside div {
+      width: calc(99% / 3 - 4px); /* Imposta la larghezza per allineare 3 div sulla stessa riga */
+      display: inline-block;
+      margin-right: 5px; /* Spazio tra i div */
+      vertical-align: top; /* Allinea i div in alto */
+     
+    }
+  }
+  
