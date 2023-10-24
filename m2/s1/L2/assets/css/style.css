@@ -1,26 +1,101 @@
 /* IMPOSTAZIONI GENERALI */
-/*--------------------------------------bottoni aggiuntivi------------------*/
+/*--------------------------------------bottoni aggiuntivi------------------
 .containerSymbols {
   position: relative;
-  text-align: right;
-  margin-bottom: 50px;
-  margin-right: 30px;
+ 
+ 
+
 }
 
 .symbol {
-  position: relative;
-  display: inline-block;
-  margin-left: 10px;
+  position: absolute;
+  
+
+}
+.symbol:nth-child(1){
+bottom: 60px;
+left: 1480px;
+
+
+;
+}
+.symbol:nth-child(2){
+  bottom: 30px;
+left: 1480px;
+
+}
+.symbol:nth-child(3){
+  bottom:0;
+  left: 1480px;
+
 }
 
 .symbols {
-  padding: 10px 20px;
+  padding: 10px 10px ;
   background-color: rgba(255, 255, 255, 0.7);
   border: 2px solid #fff;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-}
+  color: #a02571;
+  width: 10px;
+  height: 10px;
+  text-align: center;
+ 
+}*/
 
 /*-------------------------------------------------------------------------*/
+/* BUTTON FIXED */
+.social,
+.toTop {
+  line-height: 1;
+  position: fixed;
+  right: -18px;
+  z-index: 999;
+}
+
+.social {
+  top: 16px;
+}
+
+.toTop {
+  bottom: 16px;
+}
+
+@media screen and (max-width: 700px) {
+  .social {
+    top: unset;
+    bottom: 96px;
+  }
+}
+
+.toTop a,
+.social a {
+  color: #f7575e;
+  font-size: 2rem;
+  display: block;
+}
+
+.social a {
+  color: rgb(45, 101, 185);
+}
+
+.social a:first-child {
+  margin-bottom: 1rem;
+}
+
+.toTop .far,
+.social .far {
+  background: #ffffffa1;
+  backdrop-filter: blur(2px);
+  line-height: 0.8;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
+  padding: 16px;
+  border: 3px solid white;
+}
+
+
+
+/*-------------------------------------------*/
 body {
   font-family: Poppins, "Helvetica Neue", sans-serif;
   line-height: 1.6;
