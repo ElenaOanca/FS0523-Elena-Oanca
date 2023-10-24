@@ -1,5 +1,26 @@
 /* IMPOSTAZIONI GENERALI */
+/*--------------------------------------bottoni aggiuntivi------------------*/
+.containerSymbols {
+  position: relative;
+  text-align: right;
+  margin-bottom: 50px;
+  margin-right: 30px;
+}
 
+.symbol {
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.symbols {
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 2px solid #fff;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/*-------------------------------------------------------------------------*/
 body {
   font-family: Poppins, "Helvetica Neue", sans-serif;
   line-height: 1.6;
@@ -27,6 +48,10 @@ header {
   box-shadow: 0 3px 3px #444;
   margin-bottom: 1.5em;
   padding: 2em 1.5em;
+  z-index: 2;/*visibilita sopra ogni cosa*/
+  position: sticky;/* blocco header*/
+  top: 0;
+  width: 100%;
 }
 
 @media screen and (min-width: 800px) {
@@ -91,6 +116,29 @@ main {
   padding: 2em 1em;
   margin-bottom: 1.5em;
 }
+
+.line-purple{
+margin-top: -40px;
+position: static;
+width: 100%;
+text-align: center;
+
+
+}
+
+.imgLine{
+  position: relative;
+  
+  max-width: 100%;
+  
+}
+
+
+.imgHtml5{
+  float: left;
+
+}
+
 @media screen and (min-width: 700px) {
   main {
     padding: 2em;
@@ -112,6 +160,14 @@ section h2 {
   font-weight: bold;
   background-color: #a3a3a3;
   padding: 0px 1em;
+  text-transform: uppercase; /* Trasforma il testo in maiuscolo */
+  position: absolute;
+  top: -0.7em; /* Sposta l'h2 in alto di 0.7em */
+  left: 10; /* Posiziona l'h2 a sinistra */
+  width: 30%; /* Larghezza al 100% del contenitore */
+  margin: 0; /* Elimina il margine predefinito */
+  padding: 0; /* Elimina il padding predefinito */
+  z-index: 1; /* Assicura che l'h2 sia sopra gli altri contenuti */
 }
 
 /* ELEMENTI NEL MAIN - ARTICLE */
@@ -282,12 +338,16 @@ button {
   color: white;
   font-weight: bold;
 }
+
+/*---------------------------------------------------screen 500---------------*/
 @media screen and (min-width: 500px) {
   input {
     display: inline-block;
     width: 70%;
   }
 }
+
+/*--------------------------------------------------screen 700-------------------*/
 @media screen and (min-width: 700px) {
   input {
     padding: 15px;
@@ -336,7 +396,7 @@ footer {
   text-align: center;
   font-size: 1.2rem;
 }
-
+/*---------------------------------------------screen 800-----------------*/
 @media screen and (min-width: 800px) {
   footer {
     padding: 1em 12em;
@@ -346,7 +406,7 @@ footer {
 footer a {
   color: fuchsia;
 }
-
+/*----------------------------------------------screen 1200------------------*/
 @media screen and (min-width: 1200px) {
   header,
   main,
@@ -356,7 +416,7 @@ footer a {
     margin-right: auto;
   }
 }
-
+/*------------------------------------------------------------print--------*/
 @media print {
   body {
     font-size: 24px;
