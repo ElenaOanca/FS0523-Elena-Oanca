@@ -1,0 +1,252 @@
+body {
+    box-sizing: border-box;
+}
+
+/* Stili per il nav.flex */
+nav.flex {
+    background-color: #fef7e2;
+    /* Sfondo giallo chiarissimo */
+    border-radius: 40px;
+    box-sizing: border-box;
+}
+
+/* Stili per ul.ulNav */
+ul.ulNav {
+    list-style: none;
+    padding: 10px;
+    /* Aggiungi spazio all'ul */
+    display: flex;
+    justify-content: center;
+}
+
+/* Stili per tutti gli li */
+li.liNav {
+    background-color: #ffdf7f;
+    /* Sfondo giallo chiaro */
+    border-radius: 40%;
+    /* Bordi arrotondati */
+    margin: 10px;
+    /* Margine esterno per separare gli li */
+    padding: 10px;
+    /* Spazio interno all'li */
+    text-align: center;
+    width: 200px;
+    /* Larghezza fissa per tutti gli li */
+    text-decoration: none;
+    /* Rimuove la sottolineatura dai link */
+    height: 30px;
+    /* Altezza leggermente minore */
+
+}
+
+
+
+/* Stili per il testo all'interno di li.liNav e li.icon.liNav  a*/
+li.liNav p,
+li.icon.liNav p,
+a {
+    margin: 0;
+    text-decoration: none;
+    /* Rimuove la sottolineatura dai link */
+    text-align: center;
+    font-size: 0.9rem;
+    color: #732104;
+
+}
+
+/*--------------------------------------------colore testo e formatazione h------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    color: #732104;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+h4 {
+    font-size: 1.4rem;
+}
+
+/*---------------------------------------------------------------------------------------------------------------*/
+/* Stili per l'elemento .icon.liNav */
+li.icon.liNav {
+
+    margin: 2px;
+    /* Margine esterno per separare l'elemento .icon.liNav */
+    padding: 10px;
+    /* Spazio interno all'elemento .icon.liNav */
+    width: 200px;
+    /* Larghezza fissa per l'elemento .icon.liNav */
+    height: 50px;
+    /* Altezza leggermente maggiore */
+    text-transform: uppercase;
+
+    display: flex;
+    justify-content: space-between;
+    /*spazio tra gli elementi*/
+    align-items: center;
+    /*allineati al centro su asse y*/
+
+}
+
+li.icon.liNav a p {
+    font-size: large;
+    font-weight: 700;
+}
+
+/* Stili per l'immagine all'interno di li.icon.liNav */
+li.icon.liNav img {
+    width: 20px;
+    /* larghezza dell'immagine */
+
+
+
+}
+
+
+
+
+
+
+
+
+/*-----------------------------------------div 4 immagini----------------------------------*/
+/* Stili per il contenitore principale */
+.container {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* Spaziatura tra gli elementi */
+    row-gap: 3px;
+}
+
+/* Stili per ciascun div .product */
+.product {
+    width: calc(50% - 10px);
+    /* Larghezza per fare 2 elementi per riga con spazio tra di essi */
+    margin-bottom: 10px;
+    /* Spazio tra le righe */
+    text-align: center;
+}
+
+.container .product img {
+    background-position: center center;
+
+    width: 250px;
+    border-top-right-radius: 20%;
+    border-top-left-radius: 20%;
+
+
+}
+
+.product .descriptions {
+    width: 250px;
+    background-color: #fdfaeb;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+button {
+    border-radius: 50px;
+    background-color: #ffdf7f;
+    color: #732104;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.product descriptions p{
+    display: inline;
+}
+
+/*----------------------------------img e testo ultima parte------------------------------------------*/
+
+.containLatest {
+    width: 100%;
+    /* larghezza del contenitore */
+    background-color: #fdfaeb;
+    color: rgba(255, 223, 127, 255);
+    overflow: hidden;
+    /* Pulisce il float e impedisce il contenuto di fuoriuscire dal contenitore */
+    border-radius: 20px;
+}
+
+.p5 {
+    font-weight: bold;
+    /* testo in grassetto */
+    text-align: left;
+
+
+    margin: 15px;
+    /* margine superiore dal paragrafo */
+    margin-bottom: 0;
+}
+
+.product .descriptions p:nth-child(1){
+    text-align: left;
+    margin: 0;
+ 
+}
+
+.product .descriptions p:nth-child(2){
+    text-align:left;
+    margin-top: 0;
+}
+.product .descriptions p span{
+    text-align: right;
+    margin-top: 0;
+}
+
+img {
+    max-width: (90%-10px);
+    /* Assicura che l'immagine non superi la larghezza del contenitore */
+   
+     display: block;
+    /* Assicura che l'immagine non si sovrapponga al testo */
+    margin: 0px;
+    /* Aggiunge un margine superiore per separare l'immagine dal testo */
+}
+
+p {
+    margin: 0;
+    /* Rimuove il margine superiore dal paragrafo */
+}
+
+/*---------------------------------------testo finale---------------------------*/
+
+
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    /* Stili per il layout per tablet */
+    ul.ulNav {
+        flex-direction: column;
+    }
+
+    li.icon.liNav {
+        order: 1;
+        /* Vai in cima alla prima riga */
+    }
+
+    li.liNav {
+        order: 2;
+        /* Sulla seconda riga */
+    }
+}
