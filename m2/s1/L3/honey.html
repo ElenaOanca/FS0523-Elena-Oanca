@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+
+        /* Stili per il nav.flex */
+        nav.flex {
+            background-color: #fef7e2;
+            /* Sfondo giallo chiarissimo */
+            border-radius: 40px;
+            box-sizing: border-box;
+        }
+
+        /* Stili per ul.ulNav */
+        ul.ulNav {
+            list-style: none;
+            padding: 10px;
+            /* Aggiungi spazio all'ul */
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Stili per tutti gli li */
+        li.liNav {
+            background-color: #ffdf7f;
+            /* Sfondo giallo chiaro */
+            border-radius: 40%;
+            /* Bordi arrotondati */
+            margin: 10px;
+            /* Margine esterno per separare gli li */
+            padding: 10px;
+            /* Spazio interno all'li */
+            text-align: center;
+            width: 200px;
+            /* Larghezza fissa per tutti gli li */
+            text-decoration: none;
+            /* Rimuove la sottolineatura dai link */
+            height: 30px;
+            /* Altezza leggermente minore */
+
+        }
+
+
+
+        /* Stili per il testo all'interno di li.liNav e li.icon.liNav  a*/
+        li.liNav p,
+        li.icon.liNav p,
+        a {
+            margin: 0;
+            text-decoration: none;
+            /* Rimuove la sottolineatura dai link */
+            text-align: center;
+            font-size: 0.9rem;
+            color: #732104;
+
+        }
+
+        /* Stili per l'elemento .icon.liNav */
+        li.icon.liNav {
+
+            margin: 2px;
+            /* Margine esterno per separare l'elemento .icon.liNav */
+            padding: 10px;
+            /* Spazio interno all'elemento .icon.liNav */
+            width: 200px;
+            /* Larghezza fissa per l'elemento .icon.liNav */
+            height: 50px;
+            /* Altezza leggermente maggiore */
+            text-transform: uppercase;
+
+            display: flex;
+            justify-content: space-between;
+            /*spazio tra gli elementi*/
+            align-items: center;
+            /*allineati al centro su asse y*/
+
+        }
+
+        li.icon.liNav a p {
+            font-size: large;
+            font-weight: 700;
+        }
+
+        /* Stili per l'immagine all'interno di li.icon.liNav */
+        li.icon.liNav img {
+            width: 20px;
+            /* larghezza dell'immagine */
+
+
+
+        }
+
+
+        /*--------------------style h-----------------------------------------------------*/
+
+
+        /*---------------------------------------testo finale---------------------------*/
+        .p5 {
+            font-weight: bolder;
+        }
+
+        .containLatest {
+            background-color: #fdfaeb;
+            color: rgba(255, 223, 127, 255);
+        }
+
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+
+            /* Stili per il layout per tablet */
+            ul.ulNav {
+                flex-direction: column;
+            }
+
+            li.icon.liNav {
+                order: 1;
+                /* Vai in cima alla prima riga */
+            }
+
+            li.liNav {
+                order: 2;
+                /* Sulla seconda riga */
+            }
+        }
+
+
+        /*-----------------------------------------div 4 immagini----------------------------------*/
+        /* Stili per il contenitore principale */
+        .container {
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            /* Spaziatura tra gli elementi */
+            row-gap: 3px;
+        }
+
+        /* Stili per ciascun div .product */
+        .product {
+            width: calc(50% - 10px);
+            /* Larghezza per fare 2 elementi per riga con spazio tra di essi */
+            margin-bottom: 10px;
+            /* Spazio tra le righe */
+            text-align: center;
+        }
+
+        .container .product img {
+            background-position: center center;
+            box-sizing: border-box;
+            padding: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="flex">
+
+            <ul class="ulNav">
+
+
+                <li class="liNav"><a href="#">
+                        <p>Our Honey</p>
+                    </a> </li>
+                <li class="liNav"><a href="#">
+                        <p>Trace Honey</p>
+                    </a></li>
+
+                <li class="icon liNav"><i><img src="assets/imgs/logo.png"></i><a href="#">
+                        <p>Shop</p>
+                    </a></li>
+
+                <li class="liNav"><a href="#">
+                        <p>Facilities</p>
+                    </a></li>
+                <li class="liNav"><a href="#">
+                        <p>Contacts</p>
+                    </a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main>
+        <div class="h1">
+            <h1>Best Selling Product</h1>
+        </div>
+        <div class="container">
+            <div class="product">
+                <div>
+                    <img src="assets/imgs/honey.jpg">
+                </div>
+
+                <div>
+                    <h2>100% Bio Honey</h2>
+                    <p>Italian, not treated</p>
+                    <p>7$/kg</p>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <div>
+                    <img src="assets/imgs/honey.jpg">
+                </div>
+
+                <div>
+                    <h2>100% Bio Honey</h2>
+                    <p>Italian, not treated</p>
+                    <p>7$/kg</p>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <div>
+                    <img src="assets/imgs/honey.jpg">
+                </div>
+
+                <div>
+                    <h2>100% Bio Honey</h2>
+                    <p>Italian, not treated</p>
+                    <p>7$/kg</p>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+
+         <div class="product">
+                <div>
+                    <img src="assets/imgs/honey.jpg">
+                </div>
+
+                <div>
+                    <h2>100% Bio Honey</h2>
+                    <p>Italian, not treated</p>
+                    <p>7$/kg</p>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+
+
+
+
+    </main>
+    <div class="latestdNews">
+        <h3>Latest News</h3>
+    </div>
+    <div class="containLatest">
+        <p class="p5">Our delicious honey</p>
+        <div class="testo">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere excepturi nulla eligendi quibusdam
+                accusamus illum qui culpa dolor. Maiores distinctio quidem aspernatur labore modi unde officia ipsam
+                fuga id aperiam?</p>
+            <img src="assets/imgs/honey.jpg">
+        </div>
+
+    </div>
+
+</body>
+
+</html>
