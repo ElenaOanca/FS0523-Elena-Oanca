@@ -62,6 +62,34 @@
 
         }
 
+        /*--------------------------------------------colore testo e formatazione h------------------------*/
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            color: #732104;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+        }
+
+        h4 {
+            font-size: 1.4rem;
+        }
+
+        /*---------------------------------------------------------------------------------------------------------------*/
         /* Stili per l'elemento .icon.liNav */
         li.icon.liNav {
 
@@ -98,37 +126,10 @@
         }
 
 
-        /*--------------------style h-----------------------------------------------------*/
 
 
-        /*---------------------------------------testo finale---------------------------*/
-        .p5 {
-            font-weight: bolder;
-        }
-
-        .containLatest {
-            background-color: #fdfaeb;
-            color: rgba(255, 223, 127, 255);
-        }
 
 
-        @media screen and (min-width: 768px) and (max-width: 1024px) {
-
-            /* Stili per il layout per tablet */
-            ul.ulNav {
-                flex-direction: column;
-            }
-
-            li.icon.liNav {
-                order: 1;
-                /* Vai in cima alla prima riga */
-            }
-
-            li.liNav {
-                order: 2;
-                /* Sulla seconda riga */
-            }
-        }
 
 
         /*-----------------------------------------div 4 immagini----------------------------------*/
@@ -153,8 +154,102 @@
 
         .container .product img {
             background-position: center center;
-            box-sizing: border-box;
-            padding: 3px;
+
+            width: 250px;
+            border-top-right-radius: 20%;
+            border-top-left-radius: 20%;
+
+
+        }
+
+        .product .descriptions {
+            width: 250px;
+            background-color: #fdfaeb;
+            border-bottom-left-radius: 20%;
+            border-bottom-right-radius: 20%;
+        }
+
+        button {
+            border-radius: 50px;
+            background-color: #ffdf7f;
+            color: #732104;
+        }
+
+        .product descriptions p{
+            display: inline;
+        }
+
+        /*----------------------------------img e testo ultima parte------------------------------------------*/
+
+        .containLatest {
+            width: 100%;
+            /* larghezza del contenitore */
+            background-color: #fdfaeb;
+            color: rgba(255, 223, 127, 255);
+            overflow: hidden;
+            /* Pulisce il float e impedisce il contenuto di fuoriuscire dal contenitore */
+            border-radius: 20px;
+        }
+
+        .p5 {
+            font-weight: bold;
+            /* testo in grassetto */
+            text-align: left;
+
+
+            margin: 15px;
+            /* margine superiore dal paragrafo */
+            margin-bottom: 0;
+        }
+
+        .product .descriptions p:nth-child(2){
+            text-align: right;
+            margin: 0;
+         
+        }
+
+        .product .descriptions p:nth-child(3){
+            text-align: left;
+            margin-top: 0;
+        }
+
+        img {
+            max-width: (90%-10px);
+            /* Assicura che l'immagine non superi la larghezza del contenitore */
+           
+             display: block;
+            /* Assicura che l'immagine non si sovrapponga al testo */
+            margin: 10px;
+            /* Aggiunge un margine superiore per separare l'immagine dal testo */
+        }
+
+        p {
+            margin: 0;
+            /* Rimuove il margine superiore dal paragrafo */
+        }
+
+        /*---------------------------------------testo finale---------------------------*/
+
+
+
+
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+
+            /* Stili per il layout per tablet */
+            ul.ulNav {
+                flex-direction: column;
+            }
+
+            li.icon.liNav {
+                order: 1;
+                /* Vai in cima alla prima riga */
+            }
+
+            li.liNav {
+                order: 2;
+                /* Sulla seconda riga */
+            }
         }
     </style>
 </head>
@@ -192,55 +287,61 @@
         <div class="h1">
             <h1>Best Selling Product</h1>
         </div>
+
+
         <div class="container">
-            <div class="product">
+            <div class="product ">
                 <div>
                     <img src="assets/imgs/honey.jpg">
                 </div>
 
-                <div>
-                    <h2>100% Bio Honey</h2>
-                    <p>Italian, not treated</p>
+                <div class="product descriptions">
+                    <p class="p5">100% Bio Honey</p>
                     <p>7$/kg</p>
+                    <p >Italian, not treated</p>
+                    
                     <button>Add to cart</button>
                 </div>
             </div>
 
-            <div class="product">
+            <div class="product ">
                 <div>
                     <img src="assets/imgs/honey.jpg">
                 </div>
 
-                <div>
-                    <h2>100% Bio Honey</h2>
-                    <p>Italian, not treated</p>
+                <div class="product descriptions">
+                    <p class="p5">100% Bio Honey</p>
                     <p>7$/kg</p>
+                    <p>Italian, not treated</p>
+                   
                     <button>Add to cart</button>
                 </div>
             </div>
 
-            <div class="product">
+            <div class="product ">
                 <div>
                     <img src="assets/imgs/honey.jpg">
                 </div>
 
-                <div>
-                    <h2>100% Bio Honey</h2>
-                    <p>Italian, not treated</p>
+                <div class="product descriptions">
+                    <p class="p5">100% Bio Honey</p>
                     <p>7$/kg</p>
+                    <p>Italian, not treated</p>
+                 
                     <button>Add to cart</button>
                 </div>
             </div>
 
-         <div class="product">
+            <div class="product ">
                 <div>
                     <img src="assets/imgs/honey.jpg">
                 </div>
 
-                <div>
-                    <h2>100% Bio Honey</h2>
-                    <p>Italian, not treated</p>
+                <div class="product descriptions">
+                    <p class="p5">100% Bio Honey</p>
                     <p>7$/kg</p>
+                    <p>Italian, not treated</p>
+                    
                     <button>Add to cart</button>
                 </div>
             </div>
@@ -250,16 +351,17 @@
 
     </main>
     <div class="latestdNews">
-        <h3>Latest News</h3>
+        <h2>Latest News</h2>
     </div>
+
     <div class="containLatest">
         <p class="p5">Our delicious honey</p>
-        <div class="testo">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere excepturi nulla eligendi quibusdam
-                accusamus illum qui culpa dolor. Maiores distinctio quidem aspernatur labore modi unde officia ipsam
-                fuga id aperiam?</p>
-            <img src="assets/imgs/honey.jpg">
-        </div>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere excepturi nulla eligendi quibusdam
+            accusamus illum qui culpa dolor. Maiores distinctio quidem aspernatur labore modi unde officia ipsam
+            fuga id aperiam?</p>
+        <img src="assets/imgs/honey.jpg">
+
 
     </div>
 
