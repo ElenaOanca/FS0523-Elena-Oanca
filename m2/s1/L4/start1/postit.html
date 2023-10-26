@@ -17,7 +17,7 @@
         left:200px;
         right: 200px;
         bottom: 50px;
-        background-color: rgb(172, 169, 169);
+        background-color: rgb(102,102,102,255);
        
     
     flex-wrap: wrap;
@@ -25,8 +25,10 @@
     justify-content: space-around;
     align-items: center;
     perspective: 15000px;
-    transition: width 1000;
+    
     }
+
+
     .postit{
         width: 100px;
         height: 200px;
@@ -34,7 +36,7 @@
         font-size: 1.9rem;
        font-family: 'Indie Flower';
         position: relative;
-        background-color: blueviolet;
+        
         border: none;
         box-shadow: 0 20px 10px 0;
        
@@ -51,14 +53,14 @@
       
     }
     #task1, #task5, #task7{
-        background-color: rgb(244, 244, 212);
+        background-color: #fefece;
     }
     #task2, #task4, #task8{
-        background-color: rgb(212, 243, 147);
+        background-color: #ccfece;
     }
 
     #task3, #task6{
-        background-color: rgb(233, 161, 232);
+        background-color: #cacafa;
     }
     .postit:nth-child(1){
         transform: rotateY(45deg) rotateX(30deg);
@@ -93,7 +95,8 @@
     .postit:nth-child(8){ transform: rotateY(45deg) rotateX(30deg);
         transform: rotateZ(5deg);}
 
-.postit:hover{ width: 300px; /* Larghezza all'ingrandimento al passaggio del mouse */
+.postit:hover{ transform:scale(1.5) rotate(0deg);
+    transition: transform 0.5s ease-in-out;
     cursor: pointer; /* Cambia il cursore del mouse al passaggio del mouse */
 
 }
