@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Esempio di lavagna con Post It</title>
+<meta name="description" content="Creazione di una lavagna con post animati al rollover">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="reset.css">
+<link rel="stylesheet" href="postit.css">
+<style>
+    .container{
+        position: absolute;
+        display: flex;
+        top:20px;
+        left:200px;
+        right: 200px;
+        bottom: 50px;
+        background-color: rgb(172, 169, 169);
+       
+    
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    perspective: 15000px;
+    transition: width 1000;
+    }
+    .postit{
+        width: 100px;
+        height: 200px;
+        color:black;
+        font-size: 1.9rem;
+       font-family: 'Indie Flower';
+        position: relative;
+        background-color: blueviolet;
+        border: none;
+        box-shadow: 0 20px 10px 0;
+       
+        flex-basis: calc(25% - 80px);
+       text-align: center;
+     
+      
+    }
+    h1{
+        font-size: 2.7rem;
+      padding-top:50px;
+      padding-bottom: 10px;
+      font-weight: 900;
+      
+    }
+    #task1, #task5, #task7{
+        background-color: rgb(244, 244, 212);
+    }
+    #task2, #task4, #task8{
+        background-color: rgb(212, 243, 147);
+    }
+
+    #task3, #task6{
+        background-color: rgb(233, 161, 232);
+    }
+    .postit:nth-child(1){
+        transform: rotateY(45deg) rotateX(30deg);
+        transform: rotateZ(-10deg);
+
+    }
+
+    .postit:nth-child(2){
+        transform: rotateY(45deg) rotateX(30deg);
+        transform: rotateZ(10deg);
+    }
+
+    .postit:nth-child(3){
+        transform: rotateY(45deg) rotateX(30deg);
+        transform: rotateZ(-10deg);
+    }
+
+    .postit:nth-child(4){
+        transform: rotateY(45deg) rotateX(30deg);
+        transform: rotateZ(10deg);
+    }
+
+    .postit:nth-child(5){ transform: rotateY(45deg) rotateX(30deg);
+        transform: rotateZ(-5deg);}
+
+    .postit:nth-child(6){ transform: rotateY(45deg) rotateX(30deg);
+        transform: rotateZ(-15deg);}
+
+    .postit:nth-child(7){ transform: rotateY(45deg) rotateX(30deg);
+        transform: rotateZ(-5deg);}
+
+    .postit:nth-child(8){ transform: rotateY(45deg) rotateX(30deg);
+        transform: rotateZ(5deg);}
+
+.postit:hover{ width: 300px; /* Larghezza all'ingrandimento al passaggio del mouse */
+    cursor: pointer; /* Cambia il cursore del mouse al passaggio del mouse */
+
+}
+
+
+
+
+
+
+</style>
+</head>
+
+<body>
+<div class="container">
+    <DIV class="postit" id="task1"><h1>Task #1</h1><p>Creare i postit</p></DIV>
+    <DIV class="postit" id="task2"><h1>Task #2</h1><p>Colorarli</p></DIV>
+    <DIV class="postit" id="task3"><h1>Task #3</h1><p>Affiancarli</p></DIV>
+    <DIV class="postit" id="task4"><h1>Task #4</h1><p>Spaziarli</p></DIV>
+    <DIV class="postit" id="task5"><h1>Task #5</h1><p>Ombraggiarli</p></DIV>
+    <DIV class="postit" id="task6"><h1>Task #6</h1><p>Ruotarli</p></DIV>
+    <DIV class="postit" id="task7"><h1>Task #7</h1><p>Animarli</p></DIV>
+    <DIV class="postit" id="task8"><h1>Task #8</h1><p>Testarli</p></DIV>
+</div>
+</body>
+</html>
