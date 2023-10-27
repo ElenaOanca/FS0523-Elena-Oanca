@@ -159,7 +159,7 @@ nav ul {
 
 .info p {
     margin-bottom: 30px;
-    /* Aggiunge spazio tra i paragrafi  */
+    /* Aggiunge spazio tra i paragf */
 }
 
 .svg {
@@ -172,6 +172,54 @@ nav ul {
 }
 
 /*-------------------------main----------------------------------------------------------*/
+
+.divMain {
+   
+    display: flex;
+    justify-content: space-between;
+}
+
+.articleMain {
+  
+    display: flex;
+    flex-direction: column;
+}
+
+.column {
+  
+    text-align: center;
+    align-self: flex-start;
+}
+
+.content-wrapper {
+   
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+   
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.author-name {
+    font-weight: bold;
+}
+
+.pNumero {
+    color: rgb(163, 158, 158);
+    font-size: 50px;
+    font-weight: bolder;
+    border: none;
+    align-self: flex-start; 
+    
+}
+
+
+
+
 
 main {
     margin-left: 300px;
@@ -186,7 +234,7 @@ main {
 
 
     margin: 10px 10px;
-    /* Aggiunge uno spazio tra i div */
+   
     display: flex;
 
     flex-direction: column;
@@ -198,29 +246,26 @@ main {
 
 .divMain img {
     max-width: 5%;
-    /* Limita la larghezza dell'immagine */
+    float: left;
+   
 }
 
 
 .divMain .pNumero,
 .divMain img {
     order: 2;
-    /* Posiziona il numero e l'immagine sulla prima riga */
+  
 }
 
 .divMain .testoMain {
     order: 3;
-    /* Posiziona il testoMain sulla seconda riga */
+   
 }
 
-.pie {
-    order: 4;
-    /* Posiziona il pie sulla terza riga */
-}
+
 
 h6 {
     flex: 1 100%;
-    /* Occupa tutta la larghezza e va sulla prima riga */
     margin-bottom: 30px;
 }
 
@@ -248,7 +293,7 @@ h6 {
 /*-------------------img scroll----------------------------------------------------------*/
 
 .imgArticle {
-   
+
     width: 20%;
     height: 10%;
 }
@@ -277,18 +322,45 @@ h6 {
 /*--------------------------------------------------------------------------------------------------*/
 
 .assideDestra {
-   
     border-bottom: 1px solid rgb(169, 169, 169);
-   
-
 }
 
-.assideDestra, footer {
-    margin-left: 150px;
+
+
+Ecco il CSS che rispetta le condizioni da te specificate:
+
+css
+Copy code
+.assideDestra {
+    /* Aggiungi qui i tuoi stili per l'aside (ad esempio, larghezza, sfondo, ecc.) */
+}
+
+
+
+.divLink {
+    display: flex;
+    flex-wrap: wrap;
+    /* Stili per il contenitore dei link (le righe 2-4) */
+}
+
+.linkGriggi {
+    column-gap: 15px;
+    row-gap: 15px;
+    flex: calc(30% - 10px); /* 3 linkGriggi in una riga con spazi tra di loro */
+    margin-right: 10px; /* Aggiunge uno spazio tra i linkGriggi */
+    margin-bottom: 10px; /* Aggiunge uno spazio tra le righe */
+   align-items: center;
+
     
+}
+
+
+.assideDestra,
+footer {
+    margin-left: 150px;
     padding-bottom: 100px;
-    width: 600px;
-   
+    width: 400px;
+
 }
 
 /*----------------------------------------------------------------------------------------------------------------*/
@@ -298,8 +370,9 @@ h6 {
     justify-content: space-between;
     line-height: 1.6em;
 }
+
 .footer a.linkSemplici {
-    margin: 0 10px; 
+    margin:  15px;
 }
 
 /*------------------------------------------------------------------------------------------------------*/
@@ -308,33 +381,62 @@ h6 {
     display: flex;
     flex-direction: row-reverse;
     gap: 50px;
-    
-   
-    
-    
+
+
+
+
 }
 
-.linkGriggi{
+.linkGriggi {
+    height: 20px;
+    width: 50px;
     background-color: darkgray;
     color: #191919;
-    padding: 2px 5px;
-    font-size: 1rem;
+    padding: 5px;
+    font-size: 0.6rem;
     color: #fff;
     text-decoration: none;
-    border: 1px solid darkgray;
     border-radius: 20px;
-   
-    margin-bottom: 10px;
     line-height: 3;
-}
-   
-.linkVerde{
-    color: green;
-    padding-top: 50px;
+
 }
 
-.float{
+.linkVerde {
+    color: green;
+    align-self: self-end;
+  
+}
+
+.float {
     float: left;
 }
 
+/*--------------------------------------------------------------------------------*/
+.pie {
+    display: flex;
+    align-items: center;
+    /* Allinea gli elementi verticalmente al centro */
+    justify-content: space-between;
+    /* Spazio tra gli elementi e l'ultimo link a fine riga */
+}
 
+.left-group {
+    display: flex;
+    /* Per allineare i primi tre elementi a sinistra */
+    align-items: center;
+}
+
+.right-group {
+    display: flex;
+    /* Per allineare l'ultimo elemento a destra */
+    align-items: center;
+}
+
+.linkGriggi {
+    margin-right:  5px;
+    
+}
+.linkGriggi a {
+    
+    text-align: center;
+}
