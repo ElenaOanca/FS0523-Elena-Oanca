@@ -1,0 +1,144 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/*----------------Stili per header------------------------------------------------------------------------------------*/
+.yellow {
+    background-color: #ffc017;
+}
+
+.borderBottom {
+    border-bottom: 1px solid black;
+}
+
+/* Stili per h1 ---------------------------------------------------------------------------------------------------------*/
+h1 {
+    font-size: 4em;
+    /* Dimensione del carattere per h1 */
+    font-weight: bolder;
+    /* Grassetto */
+
+}
+
+/* Stili per h2 */
+h2 {
+    font-size: 28px;
+    /* Dimensione del carattere per h2 */
+    font-weight: bold;
+    /* Grassetto */
+   
+}
+
+/* Stili per h3 */
+h3 {
+    font-size: 24px;
+    /* Dimensione del carattere per h3 */
+    font-weight: bold;
+    /* Normale (non grassetto) */
+
+}
+
+/* Stili per h4 */
+h4 {
+    font-size: 20px;
+    /* Dimensione del carattere per h4 */
+    font-weight: bold;
+    /* Normale (non grassetto) */
+    
+  
+}
+
+/* Stili per h5 */
+h5 {
+    font-size: 18px;
+    /* Dimensione del carattere per h5 */
+    font-weight: bold;
+    /* Normale (non grassetto) */
+    
+   
+}
+
+/* Stili per h6 */
+h6 {
+    font-size: 16px;
+    /* Dimensione del carattere per h6 */
+    font-weight: bold;
+    /* Normale (non grassetto) */
+   
+}
+
+/* Stili per tutte le intestazioni h1 - h6 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Arial", sans-serif;
+    /* Esempio di famiglia di caratteri (sostituisci con quella desiderata) */
+    color: #191919;
+    /*colore del testo*/
+}
+
+/*-------------style p---------------------------------------------------------------------------------*/
+p{
+    color: #191919;
+    font-size: 1rem;
+}
+
+/*-------------------------------------------------------------------------------------------------------*/
+
+ul {
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none; /* Rimuove la sottolineatura */
+    font-size: 16px; /* Imposta la dimensione del carattere a 16 pixel */
+    color: #191919; /* Imposta il colore del testo a rosso (cambia il valore #ff0000 con il tuo colore preferito) */
+  }
+  /*--------------------------------------bottoni start-------------------------*/
+  .bottoneStart{
+    background-color: #191919;
+    color: white;
+    border-radius: 20px 20px 20px 20px;
+    width: 130px;
+  }
+ 
+  .bottoneGrande{
+    width: 170px;
+    height: 30px;
+  }
+
+  /*--------------allineamento section yellow--------------------------------------------------------------------------------*/
+
+header{
+   display: flex;
+
+}
+header:first-child(){}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end; /* Allinea gli elementi dalla fine dell'asse x */
+    align-items: center; /* Allinea gli elementi al centro sull'asse y */
+    gap: 50px; /* Spaziatura tra gli elementi di 20px */
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
