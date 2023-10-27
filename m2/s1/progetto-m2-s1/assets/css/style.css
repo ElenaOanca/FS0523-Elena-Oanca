@@ -111,10 +111,15 @@ ul {
   /*--------------allineamento section yellow--------------------------------------------------------------------------------*/
 
 header{
-   display: flex;
+    position: sticky;
+    top: 0;
+   
+    padding-bottom: 20px;
+    padding-right: 10px;
+   
 
 }
-header:first-child(){}
+
 
 nav ul {
     display: flex;
@@ -123,8 +128,56 @@ nav ul {
     gap: 50px; /* Spaziatura tra gli elementi di 20px */
   }
 
+/*--------------------------------------------------*/
+.section1 {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center; 
+   justify-content: space-evenly;
+   row-gap: 20px;
+
+}
+.info {
+    margin-left: 400px;
+    flex: 0 0 600px; 
+    margin-right: auto; /* Spinge verso sinistra */
+    padding: 10px;
+    line-height: 1.5;
+}
+.info p {
+    margin-bottom: 30px; /* Aggiunge spazio tra i paragrafi  */
+}
+
+.svg {
+    flex: 1; /* Occupa il restante spazio al 50% */
+    height: 400px;
+   
+}
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.section2{background-color: darkorchid;}
+main{background-color: blue;}
+aside{background-color: aqua;}
+footer{background-color: coral;}
 
 
 
