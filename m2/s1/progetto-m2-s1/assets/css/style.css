@@ -4,11 +4,10 @@ body {
 /*----------------Stili per header------------------------------------------------------------------------------------*/
 .yellow {
     background-color: #ffc017;
-}
-
-.borderBottom {
     border-bottom: 1px solid black;
 }
+
+
 
 /* Stili per h1 ---------------------------------------------------------------------------------------------------------*/
 h1 {
@@ -111,12 +110,13 @@ ul {
   /*--------------allineamento section yellow--------------------------------------------------------------------------------*/
 
 header{
+    
     position: sticky;
     top: 0;
    
     padding-bottom: 20px;
     padding-right: 10px;
-   
+   z-index: 2;
 
 }
 
@@ -150,13 +150,96 @@ nav ul {
 }
 
 .svg {
+   
     flex: 1; /* Occupa il restante spazio al 50% */
     height: 400px;
+    
+   
+}
+/*-------------------------main----------------------------------------------------------*/
+
+main {
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.divMain {
+  
+
+    margin: 10px 10px; /* Aggiunge uno spazio tra i div */
+    display: flex;
+    
+    flex-direction: column;
+    flex: 2 calc(27% - 10px);
    
 }
 
 
 
+.divMain img {
+    max-width: 5%; /* Limita la larghezza dell'immagine */
+}
+
+
+.divMain .pNumero,
+.divMain img {
+    order: 2; /* Posiziona il numero e l'immagine sulla prima riga */
+}
+
+.divMain .testoMain {
+    order: 3; /* Posiziona il testoMain sulla seconda riga */
+}
+
+.pie {
+    order: 4; /* Posiziona il pie sulla terza riga */
+}
+
+h6 {
+    flex: 1 100%; /* Occupa tutta la larghezza e va sulla prima riga */
+    margin-bottom: 30px;
+}
+
+
+/*----------------------section2-------------------------------*/
+.section2{
+    width: 500px;
+    display: flex;
+   flex-direction: column;
+   gap: 30px;
+  margin-top: 30px;
+}
+
+
+
+.assideSection2 {
+    order: 2;
+    margin-bottom: 30px;
+    
+}
+/*-------------------img scroll----------------------------------------------------------*/
+
+.imgArticle{
+    width: 300px;
+}
+
+
+/*--------------------------------------------------------------------------------------------*/
+
+.secondPart {
+    display: flex;
+    flex-direction: row; /* Imposta il layout in direzione orizzontale (predefinita) */
+    justify-content: space-between; /* Allinea .section2 a sinistra e .assideDestra a destra */
+    align-items: flex-start; /* Allinea gli elementi verticalmente in alto */
+    flex-wrap: wrap;
+  }
+  
+  .assideDestra {
+    flex: 1; /* Fai espandere .assideDestra per occupare lo spazio rimanente */
+  }
+  
 
 
 
@@ -173,11 +256,6 @@ nav ul {
 
 
 
-
-.section2{background-color: darkorchid;}
-main{background-color: blue;}
-aside{background-color: aqua;}
-footer{background-color: coral;}
 
 
 
