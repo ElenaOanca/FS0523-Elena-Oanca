@@ -227,31 +227,38 @@ h6 {
 
 /*----------------------section2-------------------------------*/
 .section2 {
-    width: 500px;
+    width: 800px;
     display: flex;
     flex-direction: column;
     gap: 30px;
     margin-top: 30px;
+    padding-bottom: 20px;
+    line-height: 1.6em;
+    margin-left: 300px;
 }
 
 
 
 .assideSection2 {
     order: 2;
-    
+
 
 }
 
 /*-------------------img scroll----------------------------------------------------------*/
 
 .imgArticle {
-    width: 300px;
+   
+    width: 20%;
+    height: 10%;
 }
 
 
 /*--------------------------------------------------------------------------------------------*/
 
 .secondPart {
+
+    margin-top: 250px;
     display: flex;
     flex-direction: row;
     /* Imposta il layout in direzione orizzontale (predefinita) */
@@ -270,30 +277,64 @@ h6 {
 /*--------------------------------------------------------------------------------------------------*/
 
 .assideDestra {
-    width: 500px;
+   
     border-bottom: 1px solid rgb(169, 169, 169);
-    padding-bottom: 30px;
-    margin: 150px;
-    
-    line-height: 1.6em;
+   
 
+}
+
+.assideDestra, footer {
+    margin-left: 150px;
+    
+    padding-bottom: 100px;
+    width: 600px;
+   
 }
 
 /*----------------------------------------------------------------------------------------------------------------*/
-footer{
-    width: 500px;
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.6em;
+}
+.footer a.linkSemplici {
+    margin: 0 10px; 
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+.articleSection2 {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 50px;
+    
    
-    padding-bottom: 30px;
-    margin: 50px;
-    margin-left: 150px;
-    line-height: 1.6em;
-
+    
+    
 }
 
-/*--------------------------------------------------------------------------------------------------------------------*/
-.section2{
-    padding-bottom: 30px;
-    margin: 50px;
-    margin-left: 300px;
-    line-height: 1.6em;
+.linkGriggi{
+    background-color: darkgray;
+    color: #191919;
+    padding: 2px 5px;
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid darkgray;
+    border-radius: 20px;
+   
+    margin-bottom: 10px;
+    line-height: 3;
 }
+   
+.linkVerde{
+    color: green;
+    padding-top: 50px;
+}
+
+.float{
+    float: left;
+}
+
+
