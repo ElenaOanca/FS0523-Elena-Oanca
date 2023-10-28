@@ -74,7 +74,7 @@ h4,
 h5,
 h6 {
     font-family: "Arial", sans-serif;
-    /* Esempio di famiglia di caratteri (sostituisci con quella desiderata) */
+    /* Esempio di famiglia di caratteri
     color: #191919;
     /*colore del testo*/
 }
@@ -347,15 +347,15 @@ Copy code
 .divLink {
     display: flex;
     flex-wrap: wrap;
-    /* Stili per il contenitore dei link (le righe 2-4) */
+   
 }
 
 .linkGriggi {
     column-gap: 15px;
     row-gap: 15px;
-    flex: calc(30% - 10px); /* 3 linkGriggi in una riga con spazi tra di loro */
-    margin-right: 10px; /* Aggiunge uno spazio tra i linkGriggi */
-    margin-bottom: 10px; /* Aggiunge uno spazio tra le righe */
+    flex: calc(30% - 10px); 
+    margin-right: 10px; 
+    margin-bottom: 10px; 
    align-items: center;
 
     
@@ -422,20 +422,20 @@ footer {
 .pie {
     display: flex;
     align-items: center;
-    /* Allinea gli elementi verticalmente al centro */
+   
     justify-content: space-between;
-    /* Spazio tra gli elementi e l'ultimo link a fine riga */
+
 }
 
 .left-group {
     display: flex;
-    /* Per allineare i primi tre elementi a sinistra */
+  
     align-items: center;
 }
 
 .right-group {
     display: flex;
-    /* Per allineare l'ultimo elemento a destra */
+  
     align-items: center;
 }
 
