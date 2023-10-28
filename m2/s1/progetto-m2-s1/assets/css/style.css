@@ -1,4 +1,4 @@
-body {
+body {box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -452,3 +452,72 @@ footer {
     position: sticky;
   top: 100px;
 }
+
+
+/*----------------------------------------------------------------------------------------*/
+
+.footer2{
+    background-color:black;
+    width: 100%;
+    margin-left: 0;
+    height: 100px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+
+.footer2  p{
+   
+    color: white;
+}
+
+.footer2   ul {
+   
+   margin-right: 70%;
+   
+}
+.logoFooter2{
+    width: 30%;
+    margin-left: 35px;
+  
+   
+}
+.divNavFooter2{
+    width: 50%;
+}
+
+.footer2   hr {
+   
+ width: 95%;
+    
+ }
+
+
+ .footer2  p{
+    margin-left: 60px;
+    margin-bottom: 20px;
+ }
+
+
+ .icone{
+  margin-left: 80px;
+    margin-bottom: 20px;
+
+ }
+
+ .icone a{
+    margin-left: 30px;
+      margin-bottom: 20px;
+      
+   }
+
+   .aFooter2{
+    color: #fff;
+   }
+
+
+   /*media----------------------------------------------------*/
+
+   @media screen(max){
+    
+   }
