@@ -1,0 +1,28 @@
+.mioLogo{
+    max-width: 250px;
+    
+}
+
+a{
+    color:#dfd08e;
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+header{
+    background-color: rgba(62,69,50,255);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+
+  h4{
+    text-align: left;
+    color:  rgba(62,69,50,255);
+  }
+ 
+.btn-primary{
+ border-radius: 50px;
+ background-color: aqua;
+ border-style: none;
+}
