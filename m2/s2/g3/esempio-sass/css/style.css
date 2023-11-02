@@ -5,4 +5,188 @@
         "savePath": "./css",
         "savePathReplacementPairs": null
     }
-]*//*# sourceMappingURL=style.css.map */
+]*/
+/* CSS Reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  -webkit-text-size-adjust: none;
+}
+
+.padding-block-sm {
+  padding: 5px;
+}
+
+.padding-block-normal {
+  padding: 10px;
+}
+
+.padding-block-md {
+  padding: 15px;
+}
+
+.padding-block-lg {
+  padding: 20px;
+}
+
+.padding-block-xl {
+  padding: 30px;
+}
+
+.padding-block-xxl {
+  padding: 40px;
+}
+
+.padding-inline-sm {
+  padding: 5px;
+}
+
+.padding-inline-normal {
+  padding: 10px;
+}
+
+.padding-inline-md {
+  padding: 15px;
+}
+
+.padding-inline-lg {
+  padding: 20px;
+}
+
+.padding-inline-xl {
+  padding: 30px;
+}
+
+.padding-inline-xxl {
+  padding: 40px;
+}
+
+.margin-block-sm {
+  margin: 5px;
+}
+
+.margin-block-normal {
+  margin: 10px;
+}
+
+.margin-block-md {
+  margin: 15px;
+}
+
+.margin-block-lg {
+  margin: 20px;
+}
+
+.margin-block-xl {
+  margin: 30px;
+}
+
+.margin-block-xxl {
+  margin: 40px;
+}
+
+.margin-inline-sm {
+  margin: 5px;
+}
+
+.margin-inline-normal {
+  margin: 10px;
+}
+
+.margin-inline-md {
+  margin: 15px;
+}
+
+.margin-inline-lg {
+  margin: 20px;
+}
+
+.margin-inline-xl {
+  margin: 30px;
+}
+
+.margin-inline-xxl {
+  margin: 40px;
+}
+
+.btn-primary {
+  background-color: #0e6cff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+.btn-primary:hover {
+  background-color: #418bff;
+}
+
+.btn-secondary {
+  background-color: #ff8700;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+.btn-secondary:hover {
+  background-color: #ff9f33;
+}
+
+.btn-success {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+.btn-success:hover {
+  background-color: #6ec071;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.mioLogo {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.imgPresentazione {
+  width: 50px;
+  height: 50px;
+}/*# sourceMappingURL=style.css.map */

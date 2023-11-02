@@ -1,0 +1,26 @@
+$spacing-values: (
+  sm: 5px,
+  normal: 10px,
+  md: 15px,
+  lg: 20px,
+  xl: 30px,
+  xxl: 40px
+);
+
+
+// Mixin  genera padding/margin
+@mixin generate-spacing-utilities($type, $context) {
+    @each $size, $value in $spacing-values {
+      .#{$type}-#{$context}-#{$size} {
+        #{$type}: $value;
+      }
+    }
+  }
+  
+  // Genera padding class
+  @include generate-spacing-utilities(padding, block);
+  @include generate-spacing-utilities(padding, inline);
+  
+  // Genera margin class
+  @include generate-spacing-utilities(margin, block);
+  @include generate-spacing-utilities(margin, inline);
