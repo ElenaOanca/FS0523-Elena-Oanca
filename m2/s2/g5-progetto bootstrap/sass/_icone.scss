@@ -5,27 +5,27 @@
   
     // Stile per le icone SVG
     svg {
-      width: 24px; /* Dimensioni più grandi */
-      height: 24px; /* Dimensioni più grandi */
-      fill: white; /* Colore bianco */
-      margin: 0 8px; /* Spazio tra le icone */
-      transition: transform 0.3s ease; /* Effetto transizione */
+      width: 24px;
+      height: 24px; 
+      fill: white; 
+      margin: 0 8px;
+      transition: transform 0.5s ease; /* Effetto transizione */
     }
   
     // Stile per il testo dei link
     a {
-      color: white; /* Colore bianco per il testo */
-      text-decoration: none; /* Rimuove la sottolineatura */
-      transition: color 0.3s ease; /* Effetto transizione */
+      color: white;
+      text-decoration: none; 
+      
     }
   
     // Cambia le dimensioni delle icone al passaggio del mouse
     svg:hover {
-      transform: scale(1.2); /* Aumenta le dimensioni al passaggio del mouse */
+      transform: scale(1.2); 
     }
   
     // Cambia il colore dei link al passaggio del mouse
     a:hover {
-      color: #d4af37; /* Cambia il colore al passaggio del mouse */
+      color: #d4af37;
     }
   }
