@@ -1,0 +1,29 @@
+@import 'reset'; // Import _reset.scss
+@import 'header'; // Import _header.scss
+@import 'button';
+@import 'contenuto'; // Import _contenuto.scss
+@import 'icone'; // Import _icone.scss
+@import 'footer'; // Import _footer.scss
+
+body{background-color: black;
+}
+
+/* Per la prima barra di navigazione (header) */
+.p-3.mb-3.border-bottom {
+    a {
+      color: white;
+    }
+  }
+  
+  /* Per la seconda barra di navigazione */
+  .navbar-dark {
+    a {
+      color: white;
+    }
+  }
+
+  /* Rimuovi i margini dalle immagini nel carosello */
+#myCarousel .carousel-inner .row [class*='col-'] img {
+    margin: 0; /* Rimuovi i margini */
+  }
+  

@@ -1,0 +1,41 @@
+footer{
+    width: 100%;
+    background: #000;
+
+    
+   
+    color: #fff;
+
+    padding: 100px;
+    
+    margin-top: auto;
+
+
+  
+   }
+   #footer {
+    width: 100%;
+   
+    margin-left: 350px;
+    margin-right: auto;
+}
+
+@media (max-width: 575.98px) {
+    #footer {
+        padding-left: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    #footer {
+        padding-left: 50px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container-custom {
+       margin-left: 450px;
+        text-align: center;
+      
+    }
+}
