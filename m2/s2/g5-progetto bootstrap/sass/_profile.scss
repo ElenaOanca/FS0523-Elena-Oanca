@@ -1,0 +1,50 @@
+#divProfile {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Stili aggiuntivi */
+.row>.col-2 {
+    display: flex;
+    justify-content: start;
+    margin-right: 10px;
+}
+
+.row>.col-9 {
+    text-align: left;
+}
+#divProfile p {
+    margin-top: 3px;
+    font-size: larger;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+
+
+#autoPlay[type="checkbox"] {
+    transform: scale(1.5);
+   }
+   
+   #autoPlay[type="checkbox"]:checked {
+    background-color: #000; /* Nero */
+   }
+
+@media (max-width: 576px) {
+    #divProfile {
+      display: block;
+    }
+  
+    .col-2,
+    .col-9 {
+      width: 100%; /* Assicurati che i div occupino l'intera larghezza */
+    }
+  
+    .col-2 img {
+      margin: 0 auto; /* Centra l'immagine */
+    }
+  }
+  

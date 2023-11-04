@@ -1,3 +1,17 @@
+@charset "UTF-8";
+/* Stile predefinito per i a */
+.navbar-nav a {
+  text-decoration: none;
+  transition: all 0.5s; /* Effetto di transizione grad*/
+  color: white;
+  margin-left: 8px;
+}
+
+/* Stile quando il mouse è sopra a */
+.navbar-nav a:hover {
+  font-size: 20px;
+}
+
 #navbarSupportedContent {
   display: none; /* Nasconde il menu inizialmente */
 }
@@ -35,7 +49,7 @@ h4 {
   width: 24px;
   height: 24px;
   fill: white;
-  margin: 0 8px;
+  margin: 5px 10px;
   transition: transform 0.5s ease; /* Effetto transizione */
 }
 .icone a {
@@ -43,47 +57,114 @@ h4 {
   text-decoration: none;
 }
 .icone svg:hover {
-  transform: scale(1.2);
-}
-.icone a:hover {
-  color: #d4af37;
+  transform: scale(2);
 }
 
 footer {
   width: 100%;
   background: #000;
   color: #fff;
-  padding: 100px;
-  margin-top: auto;
+  padding: 20px;
+  text-align: center;
 }
 
 #footer {
   width: 100%;
-  margin-left: 350px;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 576px) {
+  footer {
+    padding: 20px;
+  }
   #footer {
-    padding-left: 0;
+    margin: 0;
   }
 }
 @media (min-width: 768px) {
+  footer {
+    padding: 40px;
+  }
   #footer {
-    padding-left: 50px;
+    padding-left: 30px;
+    margin-left: 30px;
   }
 }
-@media (min-width: 1200px) {
-  .container-custom {
-    margin-left: 450px;
-    text-align: center;
+@media (min-width: 920px) {
+  footer {
+    padding: 60px;
+  }
+  #footer {
+    text-align: start;
+    margin-left: 300px;
+  }
+}
+#footer svg {
+  fill: gray;
+}
+
+/* Stile predefinito per i a */
+#aFooter {
+  color: grey;
+  text-decoration: none;
+  transition: all 0.3s; /* Effetto di transizione grad*/
+}
+
+/* Stile quando il mouse è sopra a */
+#aFooter:hover {
+  font-size: 20px;
+  color: red; /* Cambia il colore del testo */
+}
+
+#divProfile {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Stili aggiuntivi */
+.row > .col-2 {
+  display: flex;
+  justify-content: start;
+  margin-right: 10px;
+}
+
+.row > .col-9 {
+  text-align: left;
+}
+
+#divProfile p {
+  margin-top: 3px;
+  font-size: larger;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+#autoPlay[type=checkbox] {
+  transform: scale(1.5);
+}
+
+#autoPlay[type=checkbox]:checked {
+  background-color: #000; /* Nero */
+}
+
+@media (max-width: 576px) {
+  #divProfile {
+    display: block;
+  }
+  .col-2,
+  .col-9 {
+    width: 100%; /* Assicurati che i div occupino l'intera larghezza */
+  }
+  .col-2 img {
+    margin: 0 auto; /* Centra l'immagine */
   }
 }
 body {
   background-color: black;
 }
 
-/* Per la prima barra di navigazione (header) */
 .p-3.mb-3.border-bottom a {
   color: white;
 }

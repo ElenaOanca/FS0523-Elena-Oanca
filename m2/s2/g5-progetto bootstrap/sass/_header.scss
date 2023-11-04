@@ -1,0 +1,14 @@
+/* Stile predefinito per i a */
+.navbar-nav a {
+    text-decoration: none;
+    transition: all 0.5s; /* Effetto di transizione grad*/
+    color: white;
+    margin-left: 8px;
+  }
+  
+  /* Stile quando il mouse è sopra a */
+  .navbar-nav a:hover {
+    font-size: 20px; 
+    
+ 
+  }

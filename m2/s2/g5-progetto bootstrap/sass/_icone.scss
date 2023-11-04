@@ -8,7 +8,7 @@
       width: 24px;
       height: 24px; 
       fill: white; 
-      margin: 0 8px;
+      margin: 5px 10px;
       transition: transform 0.5s ease; /* Effetto transizione */
     }
   
@@ -21,11 +21,7 @@
   
     // Cambia le dimensioni delle icone al passaggio del mouse
     svg:hover {
-      transform: scale(1.2); 
+      transform: scale(2); 
     }
   
-    // Cambia il colore dei link al passaggio del mouse
-    a:hover {
-      color: #d4af37;
-    }
   }

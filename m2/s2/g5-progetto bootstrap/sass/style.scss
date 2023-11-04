@@ -4,11 +4,13 @@
 @import 'contenuto'; // Import _contenuto.scss
 @import 'icone'; // Import _icone.scss
 @import 'footer'; // Import _footer.scss
+@import 'profile';
 
-body{background-color: black;
+
+body{
+  background-color: black;
 }
 
-/* Per la prima barra di navigazione (header) */
 .p-3.mb-3.border-bottom {
     a {
       color: white;
