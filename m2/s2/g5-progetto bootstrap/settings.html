@@ -1,101 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
-<body>
+
+<body class="bg-light">
+    <header class="p-3 mb-3 bg-black border-bottom">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-black">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="Netflix-assets/assets/netflix_logo.png" height="40" width="100" alt=""
+                        loading="lazy" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation" id="mobileMenuButton">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-column flex-sm-row" id="leftLinks">
+                        <li class="nav-item">
+                            <a class=" active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="" href="#tvShows">TV Shows</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="" href="#movies">Movies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="" href="#newRelease">Recently Added</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="" href="#">My List</a>
+                        </li>
+                    </ul>
+
+                    <!--right links-->
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="profile.html">Kids</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-bell-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-mdb-toggle="dropdown" aria-expanded="false">
+                                <img src="Netflix-assets/assets/kids_icon.png" class="rounded-circle img-fluid"
+                                    height='25' width='25'>
+                            </a>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+    </header>
 
 
 
-    <div id="pageSettings" class="container ">
-        <div class="row">
-            <div class="col-12">
-                <!-- Colonna che occupa tutta la larghezza -->
-                Contenuto della colonna a larghezza piena
+
+    <div id="pageSettings" class="container bg-light ">
+        <div class="row text-black ">
+            <div class="col-12 ">
+               <h1> Account</h1>
             </div>
         </div>
-    
-        
-        <div class="row">
+
+
+        <div class="row bgray">
             <div class="col">
-                Contenuto della prima colonna
+                <p>MEMBERSHIT & BILLING</p>
+                <button class="btnSettings">Cancel Membershit</button>
             </div>
             <div class="col">
-                Contenuto della seconda colonna
+
+                <p>email</p>
+                <p>password</p>
+                <p>tel</p>
+
             </div>
             <div class="col">
-                Contenuto della terza colonna
-            </div>
-        </div>
-    
-        <div class="row">
-            <div class="col">
-                Contenuto della prima colonna
-            </div>
-            <div class="col">
-                Contenuto della seconda colonna
-            </div>
-            <div class="col">
-                Contenuto della terza colonna
-            </div>
-        </div>
-    
-        <div class="row">
-            <div class="col">
-                Contenuto della prima colonna
-            </div>
-            <div class="col">
-                Contenuto della seconda colonna
-            </div>
-            <div class="col">
-                Contenuto della terza colonna
+                <p><a href="">Change account email</a></p>
+                <p><a href=""> Change password</a></p>
+                <p><a href="">Change phone number</a></p>
             </div>
         </div>
 
         <div class="row">
             <div class="col">
-                Contenuto della prima colonna
+
             </div>
-            <div class="col">
-                Contenuto della seconda colonna
+            <div class="col bgray">
+                <p class="text-black"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-paypal" viewBox="0 0 16 16">
+                    <path d="M14.06 3.713c.12-1.071-.093-1.832-.702-2.526C12.628.356 11.312 0 9.626 0H4.734a.7.7 0 0 0-.691.59L2.005 13.509a.42.42 0 0 0 .415.486h2.756l-.202 1.28a.628.628 0 0 0 .62.726H8.14c.429 0 .793-.31.862-.731l.025-.13.48-3.043.03-.164.001-.007a.351.351 0 0 1 .348-.297h.38c1.266 0 2.425-.256 3.345-.91.379-.27.712-.603.993-1.005a4.942 4.942 0 0 0 .88-2.195c.242-1.246.13-2.356-.57-3.154a2.687 2.687 0 0 0-.76-.59l-.094-.061ZM6.543 8.82a.695.695 0 0 1 .321-.079H8.3c2.82 0 5.027-1.144 5.672-4.456l.003-.016c.217.124.4.27.548.438.546.623.679 1.535.45 2.71-.272 1.397-.866 2.307-1.663 2.874-.802.57-1.842.815-3.043.815h-.38a.873.873 0 0 0-.863.734l-.03.164-.48 3.043-.024.13-.001.004a.352.352 0 0 1-.348.296H5.595a.106.106 0 0 1-.105-.123l.208-1.32.845-5.214Z"/>
+                  </svg>PayPall admin@strive.scool</p>
             </div>
-            <div class="col">
-                Contenuto della terza colonna
+
+            <div class="col bgray ">
+               <p> <a href="">Update payment info</a></p>
+                <a href="">Billing details</a>
+
             </div>
         </div>
 
         <div class="row">
             <div class="col">
-                Contenuto della prima colonna
+
             </div>
-            <div class="col">
-                Contenuto della seconda colonna
+            <div class="col bgray">
+
             </div>
-            <div class="col">
-                Contenuto della terza colonna
+            <div class="col bgray">
+                <p><a href="">Redeem gift card or promo code</a></p>
+               <p> <a href="">Where to buy gift cards</a></p>
             </div>
         </div>
 
-        <div class="row">
+        <div class="row bgray">
             <div class="col">
-                Contenuto della prima colonna
+                <p>PLANS DETAILS</p>
             </div>
             <div class="col">
-                Contenuto della seconda colonna
+                <p>Premium <img src="Netflix-assets/assets/54453570-icona-ultra-hd.jpg" width="60px" height="30px"></p>
             </div>
             <div class="col">
-                Contenuto della terza colonna
+                <a href="">Change plan</a>
             </div>
         </div>
-        
+
+        <div class="row bgray">
+            <div class="col">
+                <p>Settings</p>
+            </div>
+            <div class="col">
+                <p><a href="">Parental controls</a></p>
+                <p><a href="">Test</a></p>
+                <p><a href="">Menage</a></p>
+                <p><a href="">Activate</a></p>
+                <p><a href="">Recent</a></p>
+                <p><a href="">Sign</a></p>
+
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+
+        <div class="row bgray">
+            <div class="col">
+                <p>My Profile</p>
+            </div>
+            <div class="col">
+                <p>Strive student</p>
+            </div>
+            <div class="col">
+
+            </div>
+            <div class="col">
+               <p><a href="">Menage profile</a></p> 
+                <p><a href="">Add profile email</a></p>
+            </div>
+        </div>
+
+        <div class="row ">
+            <div class="col">
+
+            </div>
+            <div class="col">
+                
+                <p><a href="">Language</a></p>
+                <p><a href="">Playback settings</a></p>
+                <p><a href="">Subtitle appearance</a></p>
+                
+            </div>
+            <div class="col">
+                <p><a href="">Viewing actuality</a></p>
+<p><a href="">Rating</a></p>
+
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+
     </div>
-    
-    
+
+
+
+    </div>
+
+
 </body>
+
 </html>
