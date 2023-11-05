@@ -12,6 +12,21 @@
   font-size: 20px;
 }
 
+/* Add CSS to define the hover effect and transition */
+.navbar-text svg.bi-search {
+  transition: transform 0.3s ease-in-out;
+}
+
+#linkOpen, #linkRed, #linkRed1 {
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 16px;
+}
+#linkOpen:hover, #linkRed:hover, #linkRed1:hover {
+  color: red;
+  font-size: 18px;
+}
+
 #navbarSupportedContent {
   display: none; /* Nasconde il menu inizialmente */
 }

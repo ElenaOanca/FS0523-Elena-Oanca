@@ -12,3 +12,24 @@
     
  
   }
+/* Add CSS to define the hover effect and transition */
+.navbar-text svg.bi-search {
+  transition: transform 0.3s ease-in-out;
+ 
+}
+
+#linkOpen{
+  transition: all 0.3s ease;
+  color:white;
+  font-size: 16px;
+
+  
+  &:hover {
+    color: red;
+    font-size: 18px; 
+  }
+}
+#linkRed, #linkRed1 {
+  @extend #linkOpen;
+ 
+}

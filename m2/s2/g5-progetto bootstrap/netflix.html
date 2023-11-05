@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/style.css">
@@ -46,22 +46,27 @@
                     <li class="nav-item">
                         <a class="" href="#">My List</a>
                     </ul>
+                    <!--link destra-->
                     <span class="navbar-text">
                         <ul class="navbar-nav mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-search" viewBox="0 0 16 16">
-                                        <path
-                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                                    </svg>
+                                <a id="linkOpen" class="nav-link " href="#">
+                                   
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                      </svg>
+                                   
                                 </a>
+                                <form id="searchForm" style="display: none;">
+                                    <input type="text" id="searchInput" placeholder="Search...">
+                                    <button type="submit">Submit</button>
+                                </form>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="profile.html">Kids</a>
+                                <a id="linkRed" class="nav-link " href="profile.html">Kids</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a  id="linkRed1" class="nav-link" href="#">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-bell-fill" viewBox="0 0 16 16">
                                         <path
@@ -70,7 +75,7 @@
                                 </a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                <a  class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                     data-mdb-toggle="dropdown" aria-expanded="false">
                                     <img src="Netflix-assets/assets/kids_icon.png" class="rounded-circle img-fluid"
                                         height='25' width='25'>
@@ -164,7 +169,7 @@
         <!--carousel------------------------------------------------------------------------------------------------------------------------------>
         <div>
             <h4>Trending Now</h4>
-            <div id="c0" class="carousel slide" data-bs-ride="carousel">
+            <div id="c0" class="carousel slide carousel-6-items" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div id="tvShows" class="row">
@@ -186,10 +191,11 @@
                             <div class="col-6 col-sm-4 col-md-4 col-lg-2">
                                 <img src="Netflix-assets/assets/media/media6.jpg" class="d-block w-100">
                             </div>
+                            
 
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item carousel-6-items">
                         <div class="row">
                             <div class="col-6 col-sm-4 col-md-4 col-lg-2">
                                 <img src="Netflix-assets/assets/media/media7.webp " class="d-block w-100">
@@ -231,7 +237,7 @@
 
 
             <h4>Watch Again</h4>
-            <div id="c1" class="carousel slide" data-bs-ride="carousel">
+            <div id="c1" class="carousel slide carousel-6-items" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div id="movies" class="row">
@@ -262,7 +268,7 @@
 
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item carousel-6-items">
                         <div class="row">
                             <div class="col-6 col-sm-4 col-md-4 col-lg-2">
                                 <img src="Netflix-assets/assets/media/media19.webp " class="d-block w-100"
@@ -301,7 +307,7 @@
 
 
             <h4>New Relesed</h4>
-            <div id="c2" class="carousel slide" data-bs-ride="carousel">
+            <div id="c2" class="carousel slide carousel-6-items" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div id="newRelese" class="row">
@@ -332,7 +338,7 @@
 
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item carousel-6-items">
                         <div class="row">
                             <div class="col-6 col-sm-4 col-md-4 col-lg-2">
                                 <img src="Netflix-assets/assets/media/media16.webp " class="d-block w-100"
@@ -362,14 +368,15 @@
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#c2" data-bs-slide="prev">
+                <button id="prevButton" class="carousel-control-prev" type="button" data-bs-target="#c2" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#c2" data-bs-slide="next">
+                <button id="nextButton" class="carousel-control-next" type="button" data-bs-target="#c2" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
+                
             </div>
         </div>
 
@@ -441,15 +448,12 @@
         </footer>
     </div>
 
-    <script src="js/script.js"></script>
+    
 
+       
+
+        <script src="js/script.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"></script>
-        
-
 
     
 </body>

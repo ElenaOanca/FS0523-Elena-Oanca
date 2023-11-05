@@ -6,29 +6,42 @@ $(document).ready(function(){
     });
 });
 
-/*
 document.addEventListener('DOMContentLoaded', function() {
-    // Trova tti 'a'  navbar
-    const navLinks = document.querySelectorAll('.navbar-nav a');
+    const prevButton = document.getElementById('prevButton');
+    const nextButton = document.getElementById('nextButton');
+    const carouselItems = document.querySelectorAll('#c2 .carousel-item');
 
-    //ciascun click evento
-    navLinks.forEach(link => {
-        // evento al pass del mouse sopra a
-        link.addEventListener('mouseover', function() {
-            // Ingrandisci il testo
-            link.style.fontSize = '20px';
-            
-        });
+    let currentItemIndex = 0;
 
-        // evento al passaggio del mouse fuori a
-        link.addEventListener('mouseout', function() {
-            // Ripristina impost predef
-            link.style.fontSize = '';
-            link.style.color = '';
-        });
+    prevButton.addEventListener('click', function() {
+        carouselItems[currentItemIndex].classList.remove('active');
+        currentItemIndex = (currentItemIndex - 1 + carouselItems.length) % carouselItems.length;
+        carouselItems[currentItemIndex].classList.add('active');
+    });
+
+    nextButton.addEventListener('click', function() {
+        carouselItems[currentItemIndex].classList.remove('active');
+        currentItemIndex = (currentItemIndex + 1) % carouselItems.length;
+        carouselItems[currentItemIndex].classList.add('active');
+    });
+});
+
+/*
+document.addEventListener("DOMContentLoaded", function() {
+    const openFormLink = document.getElementById("openForm");
+    const searchForm = document.getElementById("searchForm");
+
+    openFormLink.addEventListener("click", function(event) {
+        event.preventDefault();
+        searchForm.style.display = "block";
     });
 });
 */
+
+
+
+
+
 
 
 
