@@ -20,8 +20,14 @@ class User {
   // Esemp
   let utente1 = new User('Marco', 'Rossi', 30, 'Roma');
   let utente2 = new User('Laura', 'Bianchi', 35, 'Milano');
+  let utente3 = new User('Matias', 'Bianchi', 22, 'Milano');
+  let utente4 = new User('Viola', 'Thor', 22, 'Milano');
+  
+  
   
   console.log(utente1.confrontaEtaAltroUtente(utente2)); 
+  console.log(utente1.confrontaEtaAltroUtente(utente3)); 
+  console.log(utente3.confrontaEtaAltroUtente(utente4)); 
 
 
 
