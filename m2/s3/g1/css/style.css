@@ -1,0 +1,49 @@
+
+h2 {
+    color: red;
+    font-size: 1.3rem;
+  }
+  
+  /* Stili per allign i label e i campi input uno sotto l'altro */
+  label, input {
+    display: block;
+   text-align: center;
+    margin-bottom: 10px;
+    margin: 0 auto 10px;/*asse x e y*/
+  }
+  
+  
+  button {
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    padding: 8px 15px;
+  }
+  
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+
+  li {
+    margin-bottom: 10px;
+  }
+  
+  .me {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px; 
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  input[type="text"] {
+    background-color: #f31414;
+    border-radius: 5px; 
+    padding: 8px;
+   
+}
