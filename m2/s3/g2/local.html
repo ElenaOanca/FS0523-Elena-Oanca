@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Esercizi Web Storage</title>
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Registrazione con localStorage</h2>
+    <div>
+        <label for="nameInput">Inserisci il tuo nome:</label>
+        <input type="text" id="nameInput">
+        <button onclick="saveName()">Salva</button>
+        <button onclick="clearName()">Rimuovi</button>
+    </div>
+    <div>
+        <p>Valore precedentemente salvato: <span id="savedName"></span></p>
+    </div>
+    <h2>Contatore con sessionStorage</h2>
+    <p>Tempo trascorso: <span id="timer">0</span> secondi</p>
+</div>
+
+<script>
+    // Funzione per salvare il nome in localStorage
+    function saveName() {
+        var name = document.getElementById('nameInput').value;
+        localStorage.setItem('userName', name);
+        displaySavedName();
+    }
+
+    // Funzione per rimuovere il nome da localStorage
+    function clearName() {
+        localStorage.removeItem('userName');
+        displaySavedName();
+    }
+
+    // Funzione per mostrare il valore precedentemente salvato
+    function displaySavedName() {
+        var savedName = localStorage.getItem('userName');
+        var span = document.getElementById('savedName');
+        span.textContent = savedName ? savedName : 'Nessun valore salvato';
+    }
+
+    // Funzione per avviare e aggiornare il contatore
+    function startTimer() {
+        var timer = 0;
+        var timerElement = document.getElementById('timer');
+        if (sessionStorage.getItem('timer')) {
+            timer = parseInt(sessionStorage.getItem('timer'));
+        }
+
+        setInterval(function () {
+            timer++;
+            sessionStorage.setItem('timer', timer);
+            timerElement.textContent = timer + ' secondi';
+        }, 1000);
+    }
+
+    // Avvia il contatore quando la pagina viene caricata
+    startTimer();
+    // Mostra il valore precedentemente salvato all'avvio della pagina
+    displaySavedName();
+</script>
+
+</body>
+</html>
