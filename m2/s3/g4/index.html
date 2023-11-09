@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Document</title>
+    <style>
+     .buttons {
+    background: linear-gradient(to bottom, #418cb1, #051219); /* Sostituisci questi colori con quelli desiderati */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4); /* Imposta l'ombra come preferisci */
+    border: none; /* Rimuove il bordo */
+    border-radius: 5px; /* Aggiunge un po' di bordo se vuoi arrotondare gli angoli */
+    margin: 5px;
+    padding: 3px;
+    color: rgb(228, 18, 18); /* Cambia il colore del testo a tuo piacimento */
+    cursor: pointer;
+    z-index: 1;
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- Campi di ricerca -->
+        <input  type="text" id="searchQuery" placeholder="Cerca immagini...">
+        <button class="buttons"   id="loadImagesButton">Load Images</button>
+        <button class="buttons"  id="loadSecondaryImagesButton">Load Secondary Images</button>
+    </header>
+
+    <main>
+        <div id="imageContainer" class="image-container">
+            <!-- immagini con Js -->
+         
+        </div>
+    </main>
+
+    <!-- Modale per  img -->
+    <div id="imageModal" class="modal">
+        
+    
+        <button class="buttons" id="closeModal">Chiudi</button>
+    </div>
+
+    <script>
+        const apiKey = 'gp8Y8QA2fYPBHTsvNWKT9RSVqvK5KQUzniRXbf9GwKDg24IMULGqty7a';
+
+        // carico le immag
+        function loadImages(query) {
+            const apiUrl = `https://api.pexels.com/v1/search?query=${query}`;
+
+            fetch(apiUrl, {
+                headers: {
+                    Authorization: apiKey,
+                },
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                const imageContainer = document.getElementById('imageContainer');
+                imageContainer.innerHTML = ''; // Cancella eventuali immagini precedenti
+
+                data.photos.forEach(photo => {
+                    const card = document.createElement('div');
+                    card.classList.add('image-card');
+
+                    card.innerHTML = `
+                        <img src="${photo.src.medium}" alt="${photo.photographer}" />
+                        <p>${photo.photographer}</p>
+                    `;
+
+                    imageContainer.appendChild(card);
+                });
+            })
+            .catch(error => {
+                console.error('Errore nella richiesta API:', error);
+            });
+        }
+
+        // Aggiungi un event listener al pulsante "Load Images"
+        const loadImagesButton = document.getElementById('loadImagesButton');
+        loadImagesButton.addEventListener('click', () => {
+            const searchQuery = document.getElementById('searchQuery').value;
+            loadImages(searchQuery);
+        });
+
+        // Aggiungi un event listener al pulsante "Load Secondary Images"
+        const loadSecondaryImagesButton = document.getElementById('loadSecondaryImagesButton');
+        loadSecondaryImagesButton.addEventListener('click', () => {
+            const secondarySearchQuery = 'searchQuery';
+            loadImages(secondarySearchQuery);
+        });
+
+        // Aggiungi un event listener al pulsante "Chiudi" nel modale
+        const closeModalButton = document.getElementById('closeModal');
+        const imageModal = document.getElementById('imageModal');
+
+        closeModalButton.addEventListener('click', () => {
+            imageModal.style.display = 'none'; // Nascondi il modale
+        });
+    </script>
+</body>
+</html>
