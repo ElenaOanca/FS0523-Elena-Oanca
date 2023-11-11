@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Aggiungi Prodotti </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-warning">
+        <div class="container-md">
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./backoffice.html">Backoffice</a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+    <div class="container-md">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h2 class="my-4 d-inline-block">Backoffice</h2>
+                <h5 id="subtitle" class="d-inline-block"> — Crea nuovo prodotto </h5>
+
+                <form onsubmit="handleSubmit(event)">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nome Prodotto</label>
+                        <input type="text" class="form-control" id="name" aria-describedby="name"
+                            placeholder="Inserisci nome " required>
+
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Descrizione</label>
+                        <textarea type="text" class="form-control" id="description" aria-describedby="description"
+                            placeholder="Inserisci la descrizione" required></textarea>
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="price" class="form-label">Prezzo</label>
+                        <input type="number" class="form-control" id="price" aria-describedby="price" min="0"
+                            placeholder="1">
+
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Brand</label>
+                        <input type="text" class="form-control" id="brand" required>
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Url Image</label>
+                        <input type="text" class="form-control" id="imageUrl" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Invia</button>
+                    <button type="button" class="btn btn-danger d-none" onclick="handleDelete()">Elimina</button>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script>
+
+        const params = new URLSearchParams(window.location.search)
+        const productId = params.get("productId");
+        const URL = productId ? "https://striveschool-api.herokuapp.com/api/product/" + productId : "https://striveschool-api.herokuapp.com/api/product/"
+        const method = productId ? "PUT" : "POST"
+
+        window.onload = () => {
+            if (productId) {
+                // se siamo qui significa che abbiamo un id nella URL e siamo quindi in modalità modifica
+
+                fetch(URL)// fetch di tipo GET su endpoint con id incorporato
+                    .then(resp => {
+                        console.log('vero')
+                        return resp.json()
+                    })
+                    .then(resourceObj => {
+
+                        const { name, brand, description, price, imageUrl } = resourceObj
+
+
+                        // prepopolazione campi input con valori reperiti dal server su risorsa specifica (per evitare errori di battitura)
+                        document.getElementById("name").value = name
+                        document.getElementById("brand").value = brand
+                        document.getElementById("description").value = description
+                        document.getElementById("price").value = price
+                        document.getElementById("imageUrl").value = imageUrl; // Supponendo che l'URL dell'immagine sia presente nell'oggetto prodotto
+
+
+                    })
+
+
+                // cambia testo sottotitolo se siamo arrivati sulla pagina per modificare una risorsa esistente
+                document.getElementById("subtitle").innerText = " Modifica prodotto"
+                // modifica aspetto del bottone submit
+                const submitBtn = document.querySelector("button[type='submit']")
+                submitBtn.innerText = "Modifica dettagli"
+                submitBtn.classList.remove("btn-primary")
+                submitBtn.classList.add("btn-success")
+                //    gestione pulsante di delete
+                const deleteBtn = document.querySelector("button[type='button'].btn-danger")
+                deleteBtn.classList.remove("d-none") // abilita il bottone delete solo sulla pagina di modifica
+            }
+        }
+
+        const handleSubmit = event => {
+            event.preventDefault()
+            // creazione dell'oggetto che invieremo come payload
+            // N.B. la creazione di prodotto viene fatta ad ogni submit del form
+            const prodotto = {
+                name: document.getElementById("name").value,
+                brand: document.getElementById("brand").value,
+                description: document.getElementById("description").value,
+                price: Number(document.getElementById("price").value),
+                imageUrl: document.getElementById("imageUrl").value
+            }
+
+            createProduct(prodotto).then(()=>console.log());
+
+            fetch(URL, {
+                
+                method, // uguale a scrivere method: method
+                body: JSON.stringify(prodotto), // è fondamentale fare la stringhifizzazione dell'oggetto nativo o invieremo "[object Object]"
+                // un header in particolare è importantissimo, il Content-Type, per specificare il formato di invio, altrimenti non verrà riconosciuto dal server sempre
+                // l'Authorization header serve in caso di API che richiedono autenticazione tramite una API Key
+                headers: {
+                    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTRkMWMzNmQxYmJlMTAwMTgzOWU2MzYiLCJpYXQiOjE2OTk3MDgzNTYsImV4cCI6MTcwMDkxNzk1Nn0.NSwnCd9ZQq-3Srannb8l8G13YnnRs2suvBvu2VtThqw",
+                    "Content-Type": "application/json"
+                }
+            })
+                .then(resp => resp.json())
+                .then(createdObj => {
+                    // Aspettiamo il valore di createdObj per estrarre un'informazione nuova generata dal server ad es. l'_id
+
+                    // in base a come siamo arrivati qui, per creazione o modifica, creeremo il messaggio più appropriato alla fine della richiesta
+                    if (productId) {
+                        alert("Risorsa con id: " + createdObj._id + " è stata modificata con successo!")
+                    } else {
+                        alert("Risorsa creata con successo con id: " + createdObj._id)
+                    }
+                })
+            console.log(prodotto)
+
+            // pulizia dei campi solo in modalità CREAZIONE (POST)
+            if (!productId) {
+                document.getElementById("name").value = ""
+                document.getElementById("brand").value = ""
+                document.getElementById("description").value = ""
+                document.getElementById("price").value = ""
+                document.getElementById("imageUrl").value = ""
+            }
+
+
+
+            /*funzione salva dati in locale
+            function salva(prodotto) {
+              const products =  window.localStorage.getItem('products');
+            const parseProducts = JSON.parse(products);
+            parseProducts.push(prodotto);
+                window.localStorage.setItem("products", JSON.stringify(parseProducts));
+                console.log('ciao');
+            }*/
+
+
+            //func salva su backend
+            async function createProduct(prodotto) {
+                try {
+                    let response = await fetch("https://striveschool-api.herokuapp.com/api/product/", {
+                        headers: {
+                            "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTRkMWMzNmQxYmJlMTAwMTgzOWU2MzYiLCJpYXQiOjE2OTk3MDgzNTYsImV4cCI6MTcwMDkxNzk1Nn0.NSwnCd9ZQq-3Srannb8l8G13YnnRs2suvBvu2VtThqw",
+                            "Content-Type" : "application/json"
+                        },
+                        body: JSON.stringify(prodotto),
+                        method: 'POST'
+                    });
+                    return response;
+                } catch (err) {
+                    throw err;
+                }
+
+            }
+        }
+
+
+        const handleDelete = () => {
+            // chiediamo conferma all'utente di voler eliminare
+            const hasAccepted = confirm("Vuoi eliminare? ")
+
+            if (hasAccepted) {
+                // se accetta procediamo all'effettiva rimozione
+                fetch(URL, { method: "DELETE" }) 
+                  
+                    .then(resp => resp.json())
+                    .then(deletedObj => {
+                        alert("Hai eliminato " + deletedObj.name)
+
+                        window.location.assign("home.html")
+                    })
+            }
+        }
+    </script>
+</body>
+
+</html>

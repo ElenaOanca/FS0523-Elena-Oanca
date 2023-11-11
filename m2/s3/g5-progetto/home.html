@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: black;
+            height: 100px;
+            text-align: end;
+        }
+
+       
+       
+
+
+        /* Stile per i bottoni */
+        header button {
+            height: 30px;
+           
+          
+          
+            margin: 10px 20px;
+            padding: 10px;
+            color: white;
+            background-color:black;
+        }
+
+
+
+
+        hr {
+            border: 0;
+            height: 5px;
+            background-color: red;
+            margin: 30px;
+            box-shadow: brown;
+        }
+
+        #productContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .card {
+            width: calc(20% - 10px);
+            margin: 10px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 20px;
+            background-color: black;
+            color: white;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            height: 150px;
+        }
+
+        footer img {
+            height: 50px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+   
+                    <button id="contactButton">Contatti</button>
+                    <button onclick="location.href='backoffice.html'">Aggiungi nuovo prodotto</button>
+                    <button onclick="location.href='details.html'">Dettagli Prodotto</button>
+         
+                </header>
+
+    <hr>
+
+    <div id="productContainer"></div>
+
+    <footer>
+        <a href="https://facebook.com"><img src="assets/images/logoFacebook.jpg" alt="Facebook"></a>
+        <a href="https://google.com"><img src="assets/images/Google.jpg" alt="Google"></a>
+        <a href="https://instagram.com"><img src="assets/images/logoInstagram.avif" alt="Instagram"></a>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchProducts();
+        });
+
+        async function fetchProducts() {
+            try {
+                const response = await fetch('https://striveschool-api.herokuapp.com/api/product/', {
+                    headers: {
+                        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTRkMWMzNmQxYmJlMTAwMTgzOWU2MzYiLCJpYXQiOjE2OTk3MDgzNTYsImV4cCI6MTcwMDkxNzk1Nn0.NSwnCd9ZQq-3Srannb8l8G13YnnRs2suvBvu2VtThqw"
+                    }
+                });
+                const products = await response.json();
+                saveProductsToLocalStorage(products);
+                displayProducts(products);
+            } catch (error) {
+                console.error('Errore nel recupero dei prodotti:', error);
+            }
+        }
+
+        function saveProductsToLocalStorage(products) {
+            localStorage.setItem('products', JSON.stringify(products));
+        }
+
+        function displayProducts(products) {
+            const container = document.getElementById('productContainer');
+            products.forEach(product => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+            <img src="${product.imageUrl}" alt="${product.name}">
+            <h3>${product.name}</h3>
+            <p>${product.description}</p>
+            <p>${product.brand}</p>
+            <p>€${product.price}</p>
+            <button onclick="location.href='details.html'">Mostra dettagli</button>
+            <button onclick="deleteProduct('${product._id}')">Elimina prodotto</button>
+        `;
+                container.appendChild(card);
+            });
+        }
+
+        function deleteProduct(productId) {
+            let products = JSON.parse(localStorage.getItem('products'));
+            products = products.filter(product => product._id !== productId);
+            localStorage.setItem('products', JSON.stringify(products));
+            displayProducts(products); // Aggiorna la visualizzazione
+        }
+
+
+    </script>
+</body>
+
+</html>

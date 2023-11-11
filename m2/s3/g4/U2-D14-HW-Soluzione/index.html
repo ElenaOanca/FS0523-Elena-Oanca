@@ -511,12 +511,12 @@
       modal.querySelector(".modal-body").innerText = "";
       modal.querySelector(".modal-body").appendChild(image);
     };
-    const apiKey = 'gp8Y8QA2fYPBHTsvNWKT9RSVqvK5KQUzniRXbf9GwKDg24IMULGqty7a';
+
     let loadImages = async query => {
       const resp = await fetch("https://api.pexels.com/v1/search?query=" + query, {
         method: "GET",
         headers: {
-          Authorization: 'gp8Y8QA2fYPBHTsvNWKT9RSVqvK5KQUzniRXbf9GwKDg24IMULGqty7a'
+          Authorization: "[LA TUA API KEY QUI]"
         }
       })
       const body = await resp.json()
