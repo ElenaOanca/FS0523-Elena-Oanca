@@ -6,36 +6,29 @@ header {
     background-color: black;
     height: 100px;
     text-align: end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-
-
-
-
-/* Stile per i bottoni */
-header button {
-    height: 30px;
-
-
-
-    margin: 10px 20px;
-    padding: 10px;
-    color: white;
-    background-color: black;
-}
-
+/* Stile per i bottoni e link nell'intestazione */
+header button,
 header a {
     color: white;
     text-decoration: none;
+    margin: 10px 20px;
+    padding: 10px;
+    background-color: black;
+    border: none;
+    height: 30px;
 }
-
 
 hr {
     border: 0;
     height: 5px;
     background-color: red;
     margin: 30px;
-    box-shadow: brown;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 #productContainer {

@@ -2,7 +2,6 @@
 body, h1, h2, form, label, input, textarea, button {
     margin: 0;
     padding: 0;
-    color: rgb((238, 105, 78), 215);
 }
 
 /* Stile del corpo della pagina */
@@ -13,75 +12,53 @@ body {
     max-width: 800px;
     padding: 20px;
     background-color: black;
+    color: white;
 }
 
 /* Stile dell'intestazione */
 header {
     text-align: center;
     margin-bottom: 20px;
- 
 }
-header li,ul,p {
+
+header li, ul, p {
     color: white;
 }
-header button{
+
+header button {
     background-color: black;
 }
+
 h1 {
     font-size: 36px;
     color: #e87b7b;
 }
 
-/* Stile della sezione "Informazioni di Contatto" */
-section:nth-child(1) {
-    background-color:black;
-   
+/* Stile delle sezioni */
+section {
     padding: 20px;
     border-radius: 5px;
     margin-bottom: 5px;
     box-shadow: 0 0 5px rgba(221, 183, 183, 0.2);
 }
 
-h2 {
-    font-size: 24px;
-    color: #cb2020;
-    margin-bottom: 10px;
+section:nth-child(1) {
+    background-color: black;
 }
 
-ul {
-    list-style-type: none;
+section:nth-child(2) {
+    background-color: #1e1e1e;
+    color: white;
 }
 
-li {
-    margin-bottom: 10px;
-}
-
+/* Stile dei link */
 a {
     color: #0965c6;
     text-decoration: none;
     font-size: larger;
 }
 
-/* Stile della sezione "Modulo di Contatto" */
-section:nth-child(2) {
-  color: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(245, 240, 240, 0.2);
-}
-
-form {
-    max-width: 400px;
-    margin: 0 auto;
-  
-}
-
-label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
+/* Stile dei campi di input e textarea */
 input[type="text"],
 input[type="email"],
 textarea {
@@ -90,9 +67,10 @@ textarea {
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 3px;
-    background-color: rgb(127, 206, 255);
+    background-color: rgb(197, 225, 243);
 }
 
+/* Stile del pulsante */
 button {
     background-color: #256db9;
     color: #fff;
@@ -104,9 +82,5 @@ button {
 }
 
 button:hover {
-    background-color:  #cb2020;;
-}
-.main{
-    background-color: black;
-
+    background-color: #cb2020;
 }
