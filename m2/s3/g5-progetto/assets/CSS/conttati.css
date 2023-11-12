@@ -1,0 +1,112 @@
+/* Reset dei margini e del padding predefiniti del browser */
+body, h1, h2, form, label, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    color: rgb((238, 105, 78), 215);
+}
+
+/* Stile del corpo della pagina */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: black;
+}
+
+/* Stile dell'intestazione */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+ 
+}
+header li,ul,p {
+    color: white;
+}
+header button{
+    background-color: black;
+}
+h1 {
+    font-size: 36px;
+    color: #e87b7b;
+}
+
+/* Stile della sezione "Informazioni di Contatto" */
+section:nth-child(1) {
+    background-color:black;
+   
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    box-shadow: 0 0 5px rgba(221, 183, 183, 0.2);
+}
+
+h2 {
+    font-size: 24px;
+    color: #cb2020;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #0965c6;
+    text-decoration: none;
+    font-size: larger;
+}
+
+/* Stile della sezione "Modulo di Contatto" */
+section:nth-child(2) {
+  color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(245, 240, 240, 0.2);
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+  
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: rgb(127, 206, 255);
+}
+
+button {
+    background-color: #256db9;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: large;
+}
+
+button:hover {
+    background-color:  #cb2020;;
+}
+.main{
+    background-color: black;
+
+}
