@@ -83,7 +83,7 @@
    
                     <button id="contactButton">Contatti</button>
                     <button onclick="location.href='backoffice.html'">Aggiungi nuovo prodotto</button>
-                    <button onclick="location.href='details.html'">Dettagli Prodotto</button>
+               
          
                 </header>
 
@@ -96,7 +96,7 @@
         <a href="https://google.com"><img src="assets/images/Google.jpg" alt="Google"></a>
         <a href="https://instagram.com"><img src="assets/images/logoInstagram.avif" alt="Instagram"></a>
     </footer>
-
+<script src="./constants.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             fetchProducts();
@@ -104,13 +104,14 @@
 
         async function fetchProducts() {
             try {
-                const response = await fetch('https://striveschool-api.herokuapp.com/api/product/', {
+                const response = await fetch(`${API_URL}/product/`, {
                     headers: {
                         "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTRkMWMzNmQxYmJlMTAwMTgzOWU2MzYiLCJpYXQiOjE2OTk3MDgzNTYsImV4cCI6MTcwMDkxNzk1Nn0.NSwnCd9ZQq-3Srannb8l8G13YnnRs2suvBvu2VtThqw"
                     }
                 });
                 const products = await response.json();
-                saveProductsToLocalStorage(products);
+              
+               // saveProductsToLocalStorage(products);
                 displayProducts(products);
             } catch (error) {
                 console.error('Errore nel recupero dei prodotti:', error);
@@ -123,6 +124,7 @@
 
         function displayProducts(products) {
             const container = document.getElementById('productContainer');
+            container.innerHTML = '';
             products.forEach(product => {
                 const card = document.createElement('div');
                 card.className = 'card';
@@ -132,7 +134,7 @@
             <p>${product.description}</p>
             <p>${product.brand}</p>
             <p>€${product.price}</p>
-            <button onclick="location.href='details.html'">Mostra dettagli</button>
+            <button onclick="location.href='backoffice.html?productId=${product._id}'">Mostra dettagli</button>
             <button onclick="deleteProduct('${product._id}')">Elimina prodotto</button>
         `;
                 container.appendChild(card);
@@ -140,10 +142,18 @@
         }
 
         function deleteProduct(productId) {
-            let products = JSON.parse(localStorage.getItem('products'));
-            products = products.filter(product => product._id !== productId);
-            localStorage.setItem('products', JSON.stringify(products));
-            displayProducts(products); // Aggiorna la visualizzazione
+            fetch(`${API_URL}/product/${productId}`, {
+                method: 'DELETE',
+                headers: {
+                    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTRkMWMzNmQxYmJlMTAwMTgzOWU2MzYiLCJpYXQiOjE2OTk3MDgzNTYsImV4cCI6MTcwMDkxNzk1Nn0.NSwnCd9ZQq-3Srannb8l8G13YnnRs2suvBvu2VtThqw"
+                }
+                
+            })
+            .then(resp =>(fetchProducts()) )
+            // let products = JSON.parse(localStorage.getItem('products'));
+            // products = products.filter(product => product._id !== productId);
+            // localStorage.setItem('products', JSON.stringify(products));
+            // displayProducts(products); // Aggiorna la visualizzazione
         }
 
 

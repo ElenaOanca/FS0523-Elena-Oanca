@@ -88,7 +88,12 @@
             if (productId) {
                 // se siamo qui significa che abbiamo un id nella URL e siamo quindi in modalità modifica
 
-                fetch(URL)// fetch di tipo GET su endpoint con id incorporato
+                fetch(URL,{
+                    headers: {
+                    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTRkMWMzNmQxYmJlMTAwMTgzOWU2MzYiLCJpYXQiOjE2OTk3MDgzNTYsImV4cCI6MTcwMDkxNzk1Nn0.NSwnCd9ZQq-3Srannb8l8G13YnnRs2suvBvu2VtThqw"
+                },
+
+                })// fetch di tipo GET su endpoint con id incorporato
                     .then(resp => {
                         console.log('vero')
                         return resp.json()
@@ -108,7 +113,7 @@
 
                     })
 
-
+//creazione bottone modifica e elimina
                 // cambia testo sottotitolo se siamo arrivati sulla pagina per modificare una risorsa esistente
                 document.getElementById("subtitle").innerText = " Modifica prodotto"
                 // modifica aspetto del bottone submit
@@ -118,7 +123,7 @@
                 submitBtn.classList.add("btn-success")
                 //    gestione pulsante di delete
                 const deleteBtn = document.querySelector("button[type='button'].btn-danger")
-                deleteBtn.classList.remove("d-none") // abilita il bottone delete solo sulla pagina di modifica
+                deleteBtn.classList.remove("btn-warmning") // abilita il bottone delete solo sulla pagina di modifica
             }
         }
 
@@ -134,7 +139,7 @@
                 imageUrl: document.getElementById("imageUrl").value
             }
 
-            createProduct(prodotto).then(()=>console.log());
+            // createProduct(prodotto).then(()=>console.log());
 
             fetch(URL, {
                 
