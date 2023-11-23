@@ -72,3 +72,10 @@ async function fetchAbbigliamento() {
             }
         }
     }
+
+    //inizializzo la funzione che mi crea l'array di oggetti di tipo capo
+    creaArrayCapo();
+
+    //inizializzo la funzione che mi simula la vendita di un capo
+    venditaCapo(1, 1);
+    
