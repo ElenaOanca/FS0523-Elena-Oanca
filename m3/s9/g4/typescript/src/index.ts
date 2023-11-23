@@ -46,7 +46,8 @@ class Capo {
 }
 
 // Creo la fetch che mi permette di recuperare i dati dal server locale, dal file abbigliamento.json
-const fetchPromise = fetch('Abbigliamento.json');
+
+const fetchPromise = fetch('http://127.0.0.1:5500//Abbigliamento.json');
 async function fetchAbbigliamento() {
     const response:Response = await fetchPromise;
     const abbigliamento = await response.json();
