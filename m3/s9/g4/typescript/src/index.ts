@@ -47,8 +47,9 @@ class Capo {
 
 // Creo la fetch che mi permette di recuperare i dati dal server locale, dal file abbigliamento.json
 
-const fetchPromise = fetch('http://127.0.0.1:5500//Abbigliamento.json');
+
 async function fetchAbbigliamento() {
+    const fetchPromise = fetch('Abbigliamento.json');
     const response:Response = await fetchPromise;
     const abbigliamento = await response.json();
     return abbigliamento;}
@@ -72,10 +73,9 @@ async function fetchAbbigliamento() {
             }
         }
     }
-
+fetchAbbigliamento().then(abbigliamento => console.log(abbigliamento));
     //inizializzo la funzione che mi crea l'array di oggetti di tipo capo
     creaArrayCapo();
 
     //inizializzo la funzione che mi simula la vendita di un capo
     venditaCapo(1, 1);
-    
