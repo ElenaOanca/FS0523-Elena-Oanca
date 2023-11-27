@@ -1,2 +1,31 @@
-<h1>Ciao comp1!</h1>
-<p>comp1 works</p>
+<!-- <h1>Ciao comp1!</h1>
+<p>comp1 works</p> -->
+<div class="container">
+    <a routerLink="home"></a>
+  <!-- <div class="row">
+    
+    <div class="col-md-12">
+     
+      <p class="bg-primary">Ciao</p>
+    </div> -->
+  
+<!-- -creo un div che scompare quando clicco su un bottone -->
+  <!-- <div class="row" *ngIf="!hide">
+    <div class="col-md-12">
+      <p class="bg-primary">Ciao</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <button class="btn btn-primary" (click)="hide = !hide">Clicca</button>
+    </div> -->
+    <!--creo div che cambia bg se click bottone
+    -->
+    <div class="row" [ngClass]="{'bg-primary':isBlue , 'bg-danger': !isBlue}">
+      <div class="col-md-12">
+        <p >Ciao</p>
+      
+      </div>
+      <button (click)="isBlue=!isBlue">Clicca</button>
+    </div>
+  </div>
