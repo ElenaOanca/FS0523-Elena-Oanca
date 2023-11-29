@@ -10,19 +10,15 @@ import { PostService } from '../../post.service';
   styleUrls: ['./post-inattivi.component.scss']
 })
 export class PostInattiviComponent {
-  posts: string[];
+  posts: string[] = [];
   arePostsVisible = false;
 
   constructor(private postService: PostService) {
-    this.posts = this.postService.getPosts();
+    this.posts = this.postService.getInactivePosts().map(post => post.titolo);
   }
 
   togglePosts() {
     this.arePostsVisible = !this.arePostsVisible;
-  }
-//metodo che controlla se il post di tipo è attivo o meno in base al valore di arePostVisible
-  isPostActive(post: any) {
-    return post.arePostVisible==false;
   }
 
 

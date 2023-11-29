@@ -68,21 +68,21 @@ let callFilter = phone1.filterCallList(new Date(2023, 10, 25, 10, 0, 0));
 // console.log(callFilter);
 phone1.showCallList();
 console.log(phone1.showCallList());
-// console.log(phone1.listCall);
-// console.log(phone2.listCall);
-// console.log(phone3.listCall);
-//mostro residuo
-// console.log(phone1.number404());
-// console.log(phone2.number404());
-// console.log(phone3.number404());
-// //mostro  effettuate
-// console.log(phone1.getNumberCall());
-// console.log(phone2.getNumberCall());
-// console.log(phone3.getNumberCall());
-//cancello chiamate
+console.log(phone1.listCall);
+console.log(phone2.listCall);
+console.log(phone3.listCall);
+// mostro residuo
+console.log(phone1.number404());
+console.log(phone2.number404());
+console.log(phone3.number404());
+//mostro  effettuate
+console.log(phone1.getNumberCall());
+console.log(phone2.getNumberCall());
+console.log(phone3.getNumberCall());
+// cancello chiamate
 phone1.deleteCallList();
 phone2.deleteCallList();
 phone3.deleteCallList();
-// console.log(phone1.listCall);
-// console.log(phone2.listCall);
-// console.log(phone3.listCall);
+console.log(phone1.listCall);
+console.log(phone2.listCall);
+console.log(phone3.listCall);

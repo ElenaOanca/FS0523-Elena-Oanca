@@ -1,0 +1,18 @@
+<!--test di input ed output-->
+<app-comp1 testo="Bottone 1"></app-comp1>
+<app-comp1
+(onButtonClicked)="toggleVisibility($event)"
+className="btn-secondary" testo="Bottone 2"></app-comp1>
+
+<p *ngIf="visibile">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cum deleniti beatae aspernatur illum ipsa unde officia quisquam dicta aperiam, odio minus libero aut magni veritatis eaque ab possimus vitae?</p>
+
+<hr>
+<!--esercizio crud-->
+<app-form
+[newPizza]="pizzaSelezionata"
+(onAddPizza)="add($event)"></app-form>
+
+<app-tabella
+(onDeletePizza)="remove($event)"
+(onSelectPizza)="select($event)"
+[pizzeArr]="pizze"></app-tabella>

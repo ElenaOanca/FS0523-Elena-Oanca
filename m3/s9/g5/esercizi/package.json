@@ -1,7 +1,6 @@
 {
   "name": "ripetizioni-typescript",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "tsc && node dist/index.js"
@@ -11,5 +10,7 @@
   "dependencies": {
     "colors": "^1.4.0",
     "typescript": "^5.2.2"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }

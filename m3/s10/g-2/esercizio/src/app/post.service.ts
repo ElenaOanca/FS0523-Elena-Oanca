@@ -78,4 +78,12 @@ post =[
 
 ]
 
+getActivePosts(){
+  return this.post.filter(post => post.arePostVisible);
+
+}
+getInactivePosts(){
+  return this.post.filter(post => !post.arePostVisible);
+
+}
 }

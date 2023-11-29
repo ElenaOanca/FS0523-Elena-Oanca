@@ -1,0 +1,23 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Gusto</th>
+      <th>Prezzo</th>
+      <th>Azioni</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of pizzeArr">
+      <td>{{p.id}}</td>
+      <td>{{p.gusto}}</td>
+      <td>{{p.prezzo}}</td>
+      <td>
+        <button class="btn btn-warning"
+        (click)="update(p)"
+        >Modifica</button>
+        <button class="btn btn-danger" (click)="delete(p.id)">Elimina</button>
+       </td>
+    </tr>
+  </tbody>
+</table>
