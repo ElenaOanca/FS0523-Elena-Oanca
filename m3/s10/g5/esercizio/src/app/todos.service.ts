@@ -9,7 +9,23 @@ export interface Todo {
   providedIn: 'root',
 })
 export class TodosService {
-  todos: Todo[] = [];
+  todos: Todo[] = [
+    {
+      id: 1,
+      title: 'Fare la spesa',
+      completed: false,
+    },
+    {
+      id: 2,
+      title: 'Pagare le bollette',
+      completed: false,
+    },
+    {
+      id: 3,
+      title: 'Fare il bucato',
+      completed: false,
+    }
+  ];
 
   constructor() {}
 

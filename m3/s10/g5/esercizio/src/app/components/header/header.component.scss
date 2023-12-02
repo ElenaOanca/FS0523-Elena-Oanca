@@ -1,0 +1,19 @@
+.headerItem {
+  margin-right: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 999;
+}
+
+

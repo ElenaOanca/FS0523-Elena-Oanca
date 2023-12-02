@@ -1,1 +1,25 @@
+<div>
+  <app-header></app-header>
+  <app-loading *ngIf="isLoading"></app-loading>
+  <div *ngIf="!isLoading">
+  <ol  class="todoList">
+    <li *ngFor="let todo of todos">
+      {{ todo.title }}
+      {{ todo.completed }}
+    </li>
 
+
+  </ol>
+  <div class="form">
+  <form >
+    <!-- fare il form che mi inserisca e salvi i dati in todoList -->
+    <input type="text" placeholder="Inserisci un nuovo todo" [(ngModel)]="newTodo.title" name="title">
+
+    <button type="submit" (click)="addTodo()">Aggiungi</button>
+
+  </form>
+</div>
+
+
+</div>
+</div>
