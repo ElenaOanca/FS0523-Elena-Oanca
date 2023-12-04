@@ -1,18 +1,88 @@
-.todoList
-{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
+.todoList {
+  position: absolute;
+  margin-top: 150px;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  letter-spacing: 2px;
+  overflow: hidden;
+  transition: 0.5s;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
 }
 
-.form
-{
+.form {
   //fare si che si trovi sotto la todoList
   position: absolute;
   top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
+  //fare si che anche quando non e selezionato il campo sia interamente visbile e non solo il bordo
 
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  overflow: hidden;
+  transition: 0.5s;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
 }
+
+.todoInput,
+.buttonAdd {
+  padding: 10px;
+  box-sizing: border-box;
+  background: transparent;
+  border-radius: 10px;
+  outline: none;
+
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  &::placeholder {
+    color: rgba(16, 15, 15, 0.5);
+  }
+}
+
+.buttonAdd {
+  background-color: rgb(184, 174, 174);
+}
+
+/* Stile per il checkbox quando è flaggato cambia colore la casella del flag*/
+.inputComplet[type="checkbox"]:checked + label {
+  background-color:rgb(19, 0, 128);
+}
+
+.opps {
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+  //posizione centro pagina
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+ul {
+  list-style: none; /* Rimuove i punti/elispi dalla lista */
+  padding: 0; /* Rimuove il padding predefinito della lista */
+}
+
+li::before {
+  content: "-";
+  display: inline-block;
+  width: 1em; /* Spazio tra il trattino e il testo del <li> */
+  margin-right: 5px; /* Spazio tra il trattino e il testo del <li> */
+}
+
+

@@ -1,25 +1,49 @@
+<!-- Creazione del componente Todo -->
 <div>
+  <!-- Inclusione del componente Header -->
   <app-header></app-header>
+
+  <!-- Visualizzazione del componente Loading se isLoading è true -->
   <app-loading *ngIf="isLoading"></app-loading>
+
+  <!-- Visualizzazione del contenuto se isLoading è false -->
   <div *ngIf="!isLoading">
-  <ol  class="todoList">
-    <li *ngFor="let todo of todos">
-      {{ todo.title }}
-      {{ todo.completed }}
-    </li>
+    <!-- Visualizzazione del messaggio "Opps, non ci sono task..." se non ci sono task -->
+    <div class="opps" *ngIf="!hasTodos()">
+      <p>Opps, non ci sono task...</p>
+    </div>
+<div >
+    <!-- Creazione del form -->
+    <form >
+      <!-- Creazione della lista dei task -->
+      <ul class="todoList">
+        <!-- Iterazione sui task presenti nell'array todos -->
+        <li *ngFor="let todo of todos">
+          <!-- Visualizzazione del titolo del task -->
+          {{ todo.title }}
 
+          <!-- Creazione di una checkbox per segnare il task come completato -->
+          <input class="inputCompleted" (click)="toggleTodo(todo.id)" type="checkbox" [checked]="todo.completed" [ngClass]="{'checked': todo.completed}" />
+        </li>
+      </ul>
+    </form>
+  </div>
 
-  </ol>
-  <div class="form">
-  <form >
-    <!-- fare il form che mi inserisca e salvi i dati in todoList -->
-    <input type="text" required placeholder="Inserisi task" [(ngModel)]="newTodo.title" name="title" >
+    <!-- Creazione del form per l'inserimento di un nuovo task -->
+    <div class="form">
+      <form action="">
+        <!-- Campo di input per il titolo del nuovo task -->
+        <input class="todoInput"
+          type="text"
+          required
+          placeholder="Inserisi task"
+          [(ngModel)]="title"
+          name="title"
+        />
 
-    <button type="submit" (click)="addTodo()">Aggiungi</button>
-
-  </form>
-</div>
-
-
-</div>
+        <!-- Pulsante per aggiungere il nuovo task -->
+        <button class="buttonAdd" (click)="addTodo()">+</button>
+      </form>
+    </div>
+  </div>
 </div>

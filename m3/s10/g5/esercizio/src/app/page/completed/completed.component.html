@@ -1,6 +1,17 @@
+
+
 <div>
+  <!-- Renderizza il componente header -->
   <app-header></app-header>
-<app-loading></app-loading>
-
-
+  <!-- Mostra il componente di caricamento se isLoading è true -->
+  <app-loading *ngIf="isLoading"></app-loading>
+  <div class="center">
+    <ol>
+      <!-- Itera sull'array todos e mostra il titolo di ogni todo -->
+      <li class="boxShadow" *ngFor="let todo of todos">
+        {{ todo.title }}
+      </li>
+    </ol>
+  </div>
 </div>
+

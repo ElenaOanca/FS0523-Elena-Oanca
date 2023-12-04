@@ -9,23 +9,15 @@ export interface Todo {
   providedIn: 'root',
 })
 export class TodosService {
-  todos: Todo[] = [
-    {
-      id: 1,
-      title: 'Fare la spesa',
-      completed: false,
-    },
-    {
-      id: 2,
-      title: 'Pagare le bollette',
-      completed: false,
-    },
-    {
-      id: 3,
-      title: 'Fare il bucato',
-      completed: false,
+  todos: Todo[] = [];
+
+ static  instance: TodosService;
+ static getInstance(){
+    if(!TodosService.instance){
+      TodosService.instance = new TodosService();
     }
-  ];
+    return TodosService.instance;
+  }
 
   constructor() {}
 
@@ -57,8 +49,9 @@ export class TodosService {
 
   async deleteTodo(id: number) {
     await this.wait();
-    //vado a prendere l'indice dell'elemento che voglio eliminare
-    const i = this.todos.findIndex((todo) => todo.id === id);
+     //vado a prendere l'indice dell'elemento che voglio eliminare
+     const i = this.todos.findIndex((todo) => todo.id === id);
+
     //se l'indice esiste
     if (i !== -1) {
       //vado a eliminare l'elemento
@@ -86,4 +79,19 @@ export class TodosService {
       };
     }
   }
+
+  getTodoById(id:number){
+     //vado a prendere l'indice dell'elemento che voglio eliminare
+     const i = this.todos.findIndex((todo) => todo.id === id);
+
+      //se l'indice esiste
+      if (i !== -1) {
+        //vado a modificare l'elemento
+        return this.todos[i];
+      }
+      return null;
+
+
+  }
 }
+
