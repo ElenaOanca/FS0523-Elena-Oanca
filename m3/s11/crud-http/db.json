@@ -1,0 +1,28 @@
+{
+  "pizza": [
+    {
+      "active": "true",
+      "gusto": "Margherita",
+      "prezzo": 5,
+      "id": 1
+    },
+    {
+      "active": "false",
+      "gusto": "Ut excepturi rem ut ",
+      "prezzo": 5,
+      "id": 2
+    },
+    {
+      "active": "false",
+      "gusto": "Ut dolorum esse nul",
+      "prezzo": 29,
+      "id": 3
+    },
+    {
+      "active": "false",
+      "gusto": "margherita",
+      "prezzo": 29,
+      "id": 4
+    }
+  ]
+}

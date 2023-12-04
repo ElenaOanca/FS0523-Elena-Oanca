@@ -13,7 +13,7 @@
   <div class="form">
   <form >
     <!-- fare il form che mi inserisca e salvi i dati in todoList -->
-    <input type="text" placeholder="Inserisci un nuovo todo" [(ngModel)]="newTodo.title" name="title">
+    <input type="text" required placeholder="Inserisi task" [(ngModel)]="newTodo.title" name="title" >
 
     <button type="submit" (click)="addTodo()">Aggiungi</button>
 
