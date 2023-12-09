@@ -20,9 +20,14 @@ export class LoginComponent {
   save() {
     this.authSvc
       .login(this.loginData)
-      .pipe(take(1)) // prendo solo la prima occorrenza di risoluzione dell'observable
+      .pipe(take(1))
       .subscribe((data) => {
-        this.router.navigate(['/home']); // se il login va a buon fine, reindirizzo alla home
+        this.router.navigate(['/weather']);
       });
   }
+
+
+
+
+
 }

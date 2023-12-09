@@ -1,0 +1,50 @@
+.searchCity{
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  margin-bottom: 20px;
+  .searchCity__title{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  .searchCity__input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    outline: none;
+  }
+  .searchCity__button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+  }
+  .searchCity__button:hover{
+    background-color: #333;
+  }
+
+
+
+}
+
+h1{
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  text-align: center;
+}

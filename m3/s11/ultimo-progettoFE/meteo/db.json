@@ -29,6 +29,18 @@
       "password": "$2a$10$W5XybM7Vd8g8UxE2e3cTbuCdyy5/bdXsTMimBjC/MXk.jH5xET00C",
       "nome": "test",
       "id": 5
+    },
+    {
+      "email": "elena@gmail.com",
+      "password": "$2a$10$5Vsh3fxSRKtOUh.sZjORXe6Ed57bqFArw7oKGAIrvSrK/GR9/s90.",
+      "nome": "elena",
+      "id": 6
+    },
+    {
+      "email": "io@gmail.com",
+      "password": "$2a$10$vWZvohS5K6PadCNHVqOnWubzQoy5McPw81HXKgKgD1adcgA6kaOre",
+      "nome": "io",
+      "id": 7
     }
   ],
   "favourites": [
@@ -39,6 +51,22 @@
       "cityLon": "11.8734455",
       "cityId": 3171728,
       "id": 1
+    },
+    {
+      "userId": 7,
+      "cityName": "Torino",
+      "cityLat": "45.0677551",
+      "cityLon": "7.6824892",
+      "cityId": 3165524,
+      "id": 6
+    },
+    {
+      "userId": 7,
+      "cityName": "Milano",
+      "cityLat": "45.4641943",
+      "cityLon": "9.1896346",
+      "cityId": 3173435,
+      "id": 7
     }
   ]
 }

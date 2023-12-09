@@ -2,12 +2,17 @@
 <ul>
   <li><a routerLink="/">Home</a></li>
   <li><a routerLink="/auth">Login</a></li>
+  <li *ngIf="userName"><a routerLink="/weather">Weather</a></li>
+
 
   <li *ngIf="userName"><a routerLink="/favourites">Favourites</a></li>
+
+
 </ul>
 
 <div *ngIf="userName">
-  Benvenuto {{userName}}
+  <p class="nameUser">
+  Benvenuto {{userName}}</p>
 </div>
 
 <router-outlet></router-outlet>

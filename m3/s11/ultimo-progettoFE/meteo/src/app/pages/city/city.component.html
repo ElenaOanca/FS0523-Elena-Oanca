@@ -1,10 +1,19 @@
 <div>
-  {{ forecast?.city?.name }}
+  <h1>{{ forecast?.city?.name }}</h1>
   <div *ngFor="let forecast of forecast?.list || []">
-    Data: {{ forecast.dt_txt }} Meteo:
-    {{ forecast.weather[0].description }} Temperatura:
-    {{ forecast.main.temp }} Temperatura percepita:
-    {{ forecast.main.feels_like }}
+    <p class="data">Data: {{ forecast.dt_txt }}</p>
+    <p>Meteo : {{ forecast.weather[0].description }} </p>
+   <p> Temperatura :{{ forecast.main.temp }}</p>
+   <p> Temperatura percepita :{{ forecast.main.feels_like }}</p>
+    <p> Temperatura minima :{{ forecast.main.temp_min }}</p>
+    <p> Temperatura massima :{{ forecast.main.temp_max }}</p>
+    <p> Pressione :{{ forecast.main.pressure }}</p>
+    <p> Umidità :{{ forecast.main.humidity }}</p>
+    <p> Velocità del vento :{{ forecast.wind.speed }}</p>
+    <p> Nuvolosità :{{ forecast.clouds.all }}</p>
+    <p> Visibilità :{{ forecast.visibility }}</p>
+    <p> Precipitazioni :{{ forecast.pop }}</p>
+
   </div>
   <button (click)="addToFavourites()">Add to favourites</button>
 </div>
