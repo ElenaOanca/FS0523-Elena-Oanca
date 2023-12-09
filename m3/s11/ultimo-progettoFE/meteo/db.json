@@ -41,6 +41,12 @@
       "password": "$2a$10$vWZvohS5K6PadCNHVqOnWubzQoy5McPw81HXKgKgD1adcgA6kaOre",
       "nome": "io",
       "id": 7
+    },
+    {
+      "email": "elena1@gmail.com",
+      "password": "$2a$10$1pv7ahd6/2N4kmYVtjZEWe.WVIGMFSxSqs5CWM7sQ0ME3Ubi8OJRC",
+      "nome": "elena1",
+      "id": 8
     }
   ],
   "favourites": [
