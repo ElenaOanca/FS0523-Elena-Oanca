@@ -23,8 +23,9 @@
           {{ todo.title }}
 
           <!-- Creazione di una checkbox per segnare il task come completato -->
-          <input class="inputCompleted" (click)="toggleTodo(todo.id)" type="checkbox" [checked]="todo.completed" [ngClass]="{'checked': todo.completed}" />
-        </li>
+          <input class="inputCompleted" (click)="toggleTodo(todo.id)" type="checkbox "
+          [checked]="todo.completed" [ngClass]="{'checkbox-green': todo.completed}" />
+           </li>
       </ul>
     </form>
   </div>

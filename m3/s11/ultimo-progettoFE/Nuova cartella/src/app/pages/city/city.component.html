@@ -1,0 +1,10 @@
+<div>
+  {{ forecast?.city?.name }}
+  <div *ngFor="let forecast of forecast?.list || []">
+    Data: {{ forecast.dt_txt }} Meteo:
+    {{ forecast.weather[0].description }} Temperatura:
+    {{ forecast.main.temp }} Temperatura percepita:
+    {{ forecast.main.feels_like }}
+  </div>
+  <button (click)="addToFavourites()">Add to favourites</button>
+</div>

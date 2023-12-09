@@ -1,0 +1,8 @@
+<form>
+  <input name="city" id="city" type="text" placeholder="City" [(ngModel)]="city"/>
+  <button (click)="searchCity()">Get Weather</button>
+</form>
+
+<div *ngFor="let foundCity of foundCities">
+  <h1 (click)="goToWeather(foundCity.lat, foundCity.lon)" >{{ foundCity.name }} - {{foundCity.state}}</h1>
+</div>
