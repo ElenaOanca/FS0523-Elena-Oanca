@@ -47,6 +47,18 @@
       "password": "$2a$10$1pv7ahd6/2N4kmYVtjZEWe.WVIGMFSxSqs5CWM7sQ0ME3Ubi8OJRC",
       "nome": "elena1",
       "id": 8
+    },
+    {
+      "email": "argo@gmaol.com",
+      "password": "$2a$10$qvuX0KBUg04hH/AwzKZJDe7s/UEG4mP.fJzO9boqHDyEep3LBAtYC",
+      "nome": "argo",
+      "id": 9
+    },
+    {
+      "email": "io@gmail.net",
+      "password": "$2a$10$CbYLiYjWmeeJF6CVW.GAZu4uiOJMI8YOfua3YfL1XC1uPByxS1Yey",
+      "nome": "io",
+      "id": 10
     }
   ],
   "favourites": [
@@ -73,6 +85,22 @@
       "cityLon": "9.1896346",
       "cityId": 3173435,
       "id": 7
+    },
+    {
+      "userId": 10,
+      "cityName": "Padova",
+      "cityLat": "45.4077172",
+      "cityLon": "11.8734455",
+      "cityId": 3171728,
+      "id": 8
+    },
+    {
+      "userId": 10,
+      "cityName": "Padova",
+      "cityLat": "45.4077172",
+      "cityLon": "11.8734455",
+      "cityId": 3171728,
+      "id": 9
     }
   ]
 }
