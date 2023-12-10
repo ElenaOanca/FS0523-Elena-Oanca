@@ -59,6 +59,30 @@
       "password": "$2a$10$CbYLiYjWmeeJF6CVW.GAZu4uiOJMI8YOfua3YfL1XC1uPByxS1Yey",
       "nome": "io",
       "id": 10
+    },
+    {
+      "email": "elena2@gmail.com",
+      "password": "$2a$10$Da33jINOvqmgjPEr2v7xgOZShtFe/MjPLxaTLzif2bApM239Zu4E.",
+      "nome": "elena2",
+      "id": 11
+    },
+    {
+      "email": "io2@gmail.com",
+      "password": "$2a$10$jTi/CJk4mSdtsFEkxdAR8.kPE7WEYEFyfLsk/YycdGZIBC.GBDpwO",
+      "nome": "io",
+      "id": 12
+    },
+    {
+      "email": "test@email.net",
+      "password": "$2a$10$0UXjcGnNIKmOVvoaXQODe.jeOrSMkritk9QmNMO4BtaoJ2GAoPJua",
+      "nome": "test",
+      "id": 13
+    },
+    {
+      "email": "ele@gmail.com",
+      "password": "$2a$10$zKmSZtwQCoEbH5kZ9EQ4e.iXJppQMEw4aZgSEyZunwu1uEgDPW5ji",
+      "nome": "ele",
+      "id": 14
     }
   ],
   "favourites": [
@@ -101,6 +125,46 @@
       "cityLon": "11.8734455",
       "cityId": 3171728,
       "id": 9
+    },
+    {
+      "userId": 12,
+      "cityName": "Milano",
+      "cityLat": "45.4641943",
+      "cityLon": "9.1896346",
+      "cityId": 3173435,
+      "id": 10
+    },
+    {
+      "userId": 5,
+      "cityName": "Padova",
+      "cityLat": "45.4077172",
+      "cityLon": "11.8734455",
+      "cityId": 3171728,
+      "id": 11
+    },
+    {
+      "userId": 5,
+      "cityName": "Roma",
+      "cityLat": "41.8933203",
+      "cityLon": "12.4829321",
+      "cityId": 3169070,
+      "id": 13
+    },
+    {
+      "userId": 5,
+      "cityName": "Comune di Venezia",
+      "cityLat": "45.4371908",
+      "cityLon": "12.3345898",
+      "cityId": 6542284,
+      "id": 14
+    },
+    {
+      "userId": 14,
+      "cityName": "Milano",
+      "cityLat": "45.4641943",
+      "cityLon": "9.1896346",
+      "cityId": 3173435,
+      "id": 15
     }
   ]
 }

@@ -49,7 +49,13 @@ export class CityComponent {
           id: this.forecast?.city.id,
         });
       }else{
-        console.log("Utente non loggato");
+        //mostrare un alert utente non loggato, se vuoi aggiungere ai preferiti devi loggarti
+        alert("Per aggiungere ai preferiti devi loggarti o registrarti");
+
+
+        this.router.navigate(['/auth']);
+
+
 
       }
     });

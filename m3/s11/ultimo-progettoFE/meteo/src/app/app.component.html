@@ -2,7 +2,7 @@
 <ul>
   <li><a routerLink="/">Home</a></li>
   <li><a routerLink="/auth">Login</a></li>
-  <li *ngIf="userName"><a routerLink="/weather">Weather</a></li>
+  <li ><a routerLink="/weather">Weather</a></li>
 
 
   <li *ngIf="userName"><a routerLink="/favourites">Favourites</a></li>
@@ -12,7 +12,23 @@
 
 <div *ngIf="userName">
   <p class="nameUser">
-  Benvenuto {{userName}}</p>
+  Benvenuto {{userName}} ora puoi controllare e salvare le tue mete preferite!</p>
+  <img src="assets/meteo-vettoriale.jpg" alt="" width="100%" height="350">
 </div>
+
+<div *ngIf="!userName">
+  <img src="assets/meteo-vettoriale.jpg" alt="" width="100%" height="350">
+  <p class="nameUser">
+
+  Welcome in OpenWeather!</p>
+
+  <p class="nameUser">
+Stay Tuned! Register or Login  Now!
+
+    </p>
+
+</div>
+
+
 
 <router-outlet></router-outlet>
